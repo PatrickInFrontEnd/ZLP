@@ -1,3 +1,5 @@
+/* Example file to style &  build structure*/
+
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
