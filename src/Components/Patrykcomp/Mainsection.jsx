@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { queries } from './mediaquery';
 
 const Wrap = styled.div`
     margin:0;
@@ -13,6 +14,10 @@ const Wrap = styled.div`
     justify-content:center;
     align-items:center;
     color:#fff;
+    @media ${queries.firstbreak} {
+        width:50%;
+        height:50vh;
+    }
 `;
 
 const P = styled.p`
