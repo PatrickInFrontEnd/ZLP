@@ -14,6 +14,12 @@ const Wrap = styled.div`
     justify-content:center;
     align-items:center;
     color:#fff;
+    transition:.5s all;
+    &:hover{
+        background-color:#000;
+        color:#fff;
+    }
+
     @media ${queries.firstbreak} {
         width:50%;
         height:50vh;
