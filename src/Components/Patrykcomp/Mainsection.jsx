@@ -37,7 +37,7 @@ const P = styled.p`
 
 
 
-class Wrapper extends Component {
+class Main extends Component {
     state = {}
     render() {
         return (
@@ -48,4 +48,4 @@ class Wrapper extends Component {
     }
 }
 
-export default Wrapper;
+export default Main;

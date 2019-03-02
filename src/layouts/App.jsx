@@ -9,7 +9,7 @@ import LogInPage from '../pages/LogInPage';
 import SignInPage from '../pages/SignInPage';
 import NotFound from '../pages/NotFound';
 
-import reset from '../Components/resetCSS/reset.css';
+import '../Styles/resetCSS/reset.css';
 class App extends Component {
   render() {
     return (
