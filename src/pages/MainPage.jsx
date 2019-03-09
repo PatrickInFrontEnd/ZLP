@@ -4,7 +4,7 @@ class MainPage extends React.Component {
     state = {}
     render() {
         return (
-            <Main />
+            <Main/>
         );
     }
 }
