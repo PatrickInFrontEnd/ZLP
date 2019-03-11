@@ -40,6 +40,7 @@ const Navigation = styled.nav`
       padding:0 20px;
       background-color:#20202C;
       border-bottom:2px solid #444;
+      z-index:10;
       `;
 
 

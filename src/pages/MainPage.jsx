@@ -1,10 +1,10 @@
 import React from 'react';
-import Main from '../Components/Patrykcomp/Mainsection';
+import MainPg from '../Components/Patrykcomp/MainPg';
 class MainPage extends React.Component {
     state = {}
     render() {
         return (
-            <Main/>
+            <MainPg />
         );
     }
 }
