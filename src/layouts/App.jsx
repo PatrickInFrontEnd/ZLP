@@ -13,11 +13,11 @@ import "../Styles/resetCSS/reset.css";
 
 const Main = styled.main`
   background-color: "black";
-  width: 60%;
-  max-width: 1200px;
+  width: 80%;
+  max-width: 1800px;
   margin: 0 auto;
   @media only screen and (max-width: 1824px) {
-    width: 80%;
+    width: 100%;
   }
   @media only screen and (max-width: 768px) {
     width: 100%;
