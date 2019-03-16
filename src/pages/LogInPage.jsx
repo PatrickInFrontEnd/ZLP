@@ -18,6 +18,7 @@ const H2 = styled.h2`
   color: white !important;
   padding: 15px 0 0 0;
   font-size: 2rem !important;
+  text-align: center;
 `;
 const Form = styled.form`
   width: 100%;
