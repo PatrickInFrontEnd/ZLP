@@ -34,6 +34,9 @@ const Form = styled.form`
 const Button = styled.button`
   font-family: "Nunito" !important;
   background-color: #3273dc !important;
+  &:hover {
+    background-color: #1051ba !important;
+  }
 `;
 const Input = styled.input`
   font-family: "Nunito" !important;
