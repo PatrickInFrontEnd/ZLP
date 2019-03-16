@@ -89,7 +89,7 @@ const NavBtnStyle = styled.div`
 const NavBtn = styled.div`
       position:relative;
       padding:10px 15px;
-      font-family: 'Nunito','Arial','Sans-Serif';
+      font-family: 'Nunito','Montserrat','Arial','Sans-Serif';
       font-size: ${(props) => props.isBig ? '20px' : '18px'};
       font-weight:700;
       color: #05A1E9;

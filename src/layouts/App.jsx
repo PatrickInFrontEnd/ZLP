@@ -8,8 +8,7 @@ import LedderPage from "../pages/LedderPage";
 import LogInPage from "../pages/LogInPage";
 import SignInPage from "../pages/SignInPage";
 import NotFound from "../pages/NotFound";
-import styled from "styled-components";
-import "../Styles/resetCSS/reset.css";
+import styled, { createGlobalStyle } from "styled-components";
 
 const Main = styled.main`
   background-color: "black";
@@ -28,6 +27,7 @@ class App extends Component {
   render() {
     return (
       <>
+        <GlobalStyle />
         <Nav />
         <Main>
           <Switch>
@@ -46,3 +46,13 @@ class App extends Component {
 }
 
 export default App;
+
+const GlobalStyle = createGlobalStyle`
+    *{
+      padding:0;
+      margin:0;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Nunito:400,700|Saira:400,700&subset=latin-ext');
+`;
