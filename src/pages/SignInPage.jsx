@@ -73,7 +73,7 @@ class SignInPage extends Component {
               name="name"
               onChange={this.handleChange}
               value={this.state.email}
-              data-name="name"
+              data-name="email"
               placeholder="email"
             />
             <span className="is-medium icon is-left">
@@ -87,7 +87,7 @@ class SignInPage extends Component {
               name="password"
               id="userName"
               onChange={this.handleChange}
-              value={this.state.password}
+              value={this.state.userName}
               data-name="userName"
               placeholder="nazwa użytkownika"
             />
@@ -117,7 +117,7 @@ class SignInPage extends Component {
               name="reapettedPassword"
               id="reapettedPassword"
               onChange={this.handleChange}
-              value={this.state.password}
+              value={this.state.reapettedPassword}
               data-name="reapettedPassword"
               placeholder="powtórz hasło"
             />

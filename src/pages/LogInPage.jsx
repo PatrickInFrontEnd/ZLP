@@ -63,8 +63,8 @@ class LogInPage extends Component {
               data-name="name"
               placeholder="email"
             />
-            <span class="is-medium icon is-left">
-              <i class="fas fa-envelope fa-xs" />
+            <span className="is-medium icon is-left">
+              <i className="fas fa-envelope fa-xs" />
             </span>
           </Wrapper>
           <Wrapper className="control is-medium has-icons-left">
@@ -78,8 +78,8 @@ class LogInPage extends Component {
               data-name="password"
               placeholder="hasło"
             />
-            <span class="is-medium icon is-left">
-              <i class="fas fa-lock" />
+            <span className="is-medium icon is-left">
+              <i className="fas fa-lock" />
             </span>
           </Wrapper>
           <Wrapper>
