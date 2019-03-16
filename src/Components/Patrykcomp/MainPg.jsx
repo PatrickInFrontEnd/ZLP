@@ -48,6 +48,7 @@ const Banner = styled.h1`
             width: 50%;
             padding:10px 20px;
             font-size: 48px;
+            font-weight:bold;
             border:2px solid #fff;
             border-radius:20px;
             text-align:center;
@@ -69,6 +70,7 @@ const BannerBtn = styled.a`
 
             &::before,
             &::after{
+                box-sizing:content-box;
                 position:absolute;
                 color: #fff;
                 opacity:0;
@@ -109,6 +111,9 @@ const BannerBtn = styled.a`
                 opacity:1;
                 visibility:visible;
             }
+            &:hover{
+                color: #fff;
+            }
         `;
 
 const DownArrow = styled.i`
@@ -136,7 +141,7 @@ const CheckOutTitle = styled.h3`
     position:absolute;
     bottom:20%;
     left:50%;
-    transform:translate(-50%,-50%);
+    transform:translate(-50%,50%);
     width:30%;
     font-size:20px;
     font-weight:400;

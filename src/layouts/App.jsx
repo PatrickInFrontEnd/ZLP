@@ -11,7 +11,6 @@ import NotFound from "../pages/NotFound";
 import styled, { createGlobalStyle } from "styled-components";
 
 const Main = styled.main`
-  background-color: "black";
   width: 80%;
   max-width: 1800px;
   margin: 0 auto;
@@ -53,6 +52,9 @@ const GlobalStyle = createGlobalStyle`
       margin:0;
       box-sizing: border-box;
       text-decoration: none;
+    }
+    body{
+      background-color:rgb(44, 62, 80);
     }
     @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Nunito:400,700|Saira:400,700&subset=latin-ext');
 `;
