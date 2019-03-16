@@ -8,7 +8,6 @@ const Container = styled.div`
   padding: 150px 0 0 0;
   margin: 0 auto 0;
   color: white;
-  height: calc(100vh - 80px);
   display: flex;
   justify-content: center;
   @media only screen and (max-width: 550px) {
