@@ -14,8 +14,11 @@ class MainPg extends Component {
                     <BannerBtn href="#"><DownArrow className="fas fa-angle-double-down" /></BannerBtn>
                     <CheckOutTitle>Sprawdź co cię czeka!</CheckOutTitle>
                 </BannerSection>
-                <BlogSection />
-            </Wrap >
+                <BlogSection>
+                    <BlogTitleBgc>
+                    </BlogTitleBgc>
+                </BlogSection>
+            </Wrap>
         );
     }
 }
@@ -150,7 +153,21 @@ const CheckOutTitle = styled.h3`
 
 const BlogSection = styled.section`
     width:100%;
-    min-height:calc(100vh - 80px);
+    height:calc(100vh - 80px);
     position:relative;
     background-image:linear-gradient(55deg,#0a3d62 0% 45%,#079992 55% 100%);
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+`;
+
+const BlogTitleBgc = styled.div`
+    position:relative;
+    width:350px;
+    height:80%;
+    background-color:rgb(47, 53, 66);
+    transform:skewX(-35deg);
+    margin-left:50px;
+    padding:20px 10px;
+    box-shadow:0px 0px 5px 5px rgb(30, 144, 255);
 `;
