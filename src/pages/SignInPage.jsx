@@ -45,7 +45,7 @@ class SignInPage extends Component {
   handleSubmit = e => {
     e.preventDefault();
     if (
-      this.state.name &&
+      this.state.email &&
       this.state.password &&
       this.state.reapettedPassword &&
       this.state.userName
