@@ -3,6 +3,7 @@ import styled from "styled-components";
 import "bulma";
 
 const Container = styled.div`
+  font-family: "Nunito";
   width: 500px;
   padding: 150px 0 0 0;
   margin: 0 auto 0;
@@ -10,6 +11,10 @@ const Container = styled.div`
   height: calc(100vh - 80px);
   display: flex;
   justify-content: center;
+  @media only screen and (max-width: 550px) {
+    width: 90%;
+    padding: 30px 0 0 0;
+  }
 `;
 const Wrapper = styled.div`
   margin: 30px 5px;
@@ -17,11 +22,21 @@ const Wrapper = styled.div`
 const H2 = styled.h2`
   color: white !important;
   padding: 15px 0 0 0;
-  font-size: 2rem !important;
+  font-size: 3rem !important;
   text-align: center;
+  @media only screen and (max-width: 550px) {
+    font-size: 2rem !important;
+  }
 `;
 const Form = styled.form`
   width: 100%;
+`;
+const Button = styled.button`
+  font-family: "Nunito" !important;
+  background-color: #3273dc !important;
+`;
+const Input = styled.input`
+  font-family: "Nunito" !important;
 `;
 
 class SignInPage extends Component {
@@ -67,7 +82,7 @@ class SignInPage extends Component {
         <Form action="" onSubmit={this.handleSubmit}>
           <H2 className="label is-large">Zarejestruj się</H2>
           <Wrapper className="control is-medium has-icons-left">
-            <input
+            <Input
               type="email"
               className="input is-medium"
               id="name"
@@ -82,7 +97,7 @@ class SignInPage extends Component {
             </span>
           </Wrapper>
           <Wrapper className="control is-medium has-icons-left">
-            <input
+            <Input
               type="text"
               className="input is-medium"
               name="password"
@@ -97,7 +112,7 @@ class SignInPage extends Component {
             </span>
           </Wrapper>
           <Wrapper className="control is-medium has-icons-left">
-            <input
+            <Input
               type="password"
               className="input is-medium"
               name="password"
@@ -112,7 +127,7 @@ class SignInPage extends Component {
             </span>
           </Wrapper>
           <Wrapper className="control is-medium has-icons-left">
-            <input
+            <Input
               type="password"
               className="input is-medium"
               name="reapettedPassword"
@@ -127,9 +142,9 @@ class SignInPage extends Component {
             </span>
           </Wrapper>
           <Wrapper>
-            <button type="submit" className="button is-info is-medium">
+            <Button type="submit" className="button is-info is-medium">
               Zarejestruj się
-            </button>
+            </Button>
           </Wrapper>
         </Form>
       </Container>
