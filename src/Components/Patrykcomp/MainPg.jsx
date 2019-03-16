@@ -4,28 +4,30 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 class MainPg extends Component {
-    state = {}
-    render() {
-        return (
-            <Wrap>
-                <BannerSection >
-                    <Banner>Witaj Graczu!</Banner>
-                    <BannerBtn href="#"><DownArrow className="fas fa-angle-double-down" /></BannerBtn>
-                    <CheckOutTitle>Sprawdź co cię czeka!</CheckOutTitle>
-                </BannerSection>
-                <BlogSection>
-                    <BlogTitleBgc>
-                    </BlogTitleBgc>
-                </BlogSection>
-            </Wrap>
-        );
-    }
+  state = {}
+  render() {
+    return (
+      <Wrap>
+        <BannerSection >
+          <Banner>Witaj Graczu!</Banner>
+          <BannerBtn href="#"><DownArrow className="fas fa-angle-double-down" /></BannerBtn>
+          <CheckOutTitle>Sprawdź co cię czeka!</CheckOutTitle>
+        </BannerSection>
+        <BlogSection>
+          <GetToKnowOurBlog>Poznaj naszego bloga!</GetToKnowOurBlog>
+          <BlogBtn>Blog ZLP</BlogBtn>
+          <Blog >Miejsce na Bloga</Blog>
+        </BlogSection>
+      </Wrap>
+    );
+  }
 }
 
 export default MainPg;
 
 const Wrap = styled.div`
   width: 100%;
+  color: #fff;
 `;
 
 const BannerSection = styled.div`
@@ -36,7 +38,6 @@ const BannerSection = styled.div`
   background-image: url("../../../Images/baner.png");
   background-size: cover;
   background-position: center center;
-  color: #fff;
 `;
 
 const Banner = styled.h1`
@@ -79,11 +80,11 @@ const BannerBtn = styled.a`
 
   &::before {
     content: "";
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     transform: translateY(-50%) rotate(45deg);
     background-color: #fff;
-    right: -40px;
+    right: -42px;
     top: 50%;
   }
   &::after {
@@ -157,14 +158,67 @@ const BlogSection = styled.section`
     overflow:hidden;
 `;
 
-const BlogTitleBgc = styled.div`
-    position:relative;
-    width:350px;
-    height:80%;
-    background-color:rgb(47, 53, 66);
-    transform:skewX(-35deg);
-    margin-left:50px;
-    padding:20px 10px;
-    box-shadow:0px 0px 5px 5px rgb(30, 144, 255);
+const GetToKnowOurBlog = styled.h1`
+    position:absolute;
+    top:20%;
+    font-size:46px;
+    font-weight:bolder;
+    transform:translate(20%,-50%);
+    width:600px;
+    padding:10px 15px;
+    border-bottom:2px solid;
+    color: #f5f6fa;
+    letter-spacing:4px;
 `;
 
+const BlogBtn = styled.a`
+    color:#fff;
+    background-color:transparent;
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+    line-height:60px;
+    letter-spacing:2px;
+    width:300px;
+    border:2px solid;
+    border-radius:10px;
+    transition:.3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    transform:translate(40%,-100%);
+    position:absolute;
+    top:50%;
+    overflow:hidden;
+    z-index:5;
+
+    &:hover{
+      color: rgb(100, 255, 255);
+    }
+
+    &::before{
+      content:'';
+      position:absolute;
+      left:0;
+      bottom: 0;
+      display:block;
+      width:100%;
+      height:0;
+      background-color:#130f40;
+      transition:.3s;
+      z-index:-1;
+    }
+
+    &:hover::before{
+      height:100%;
+    }
+`;
+
+const Blog = styled.div`
+    position:absolute;
+    bottom: 5%;
+    right:5%;
+    width:60%;
+    height:60%;
+    color: #000;
+    background-color:#fff;
+    box-shadow:10px 10px 40px 1px #000;
+    overflow:auto;
+`;

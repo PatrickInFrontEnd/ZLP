@@ -56,5 +56,10 @@ const GlobalStyle = createGlobalStyle`
     body{
       background-color:rgb(44, 62, 80);
     }
+
+    a,span,button{
+      transition-duration:.3s;
+    }
+
     @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Nunito:400,700|Saira:400,700&subset=latin-ext');
 `;
