@@ -10,7 +10,7 @@ class MainPg extends Component {
       <Wrap>
         <BannerSection >
           <Banner>Witaj Graczu!</Banner>
-          <BannerBtn href="#"><DownArrow className="fas fa-angle-double-down" /></BannerBtn>
+          <BannerBtn cont="Kliknij" href="#"><DownArrow className="fas fa-angle-double-down" /></BannerBtn>
           <CheckOutTitle>Sprawdź co cię czeka!</CheckOutTitle>
         </BannerSection>
         <BlogSection>
@@ -88,7 +88,7 @@ const BannerBtn = styled.a`
     top: 50%;
   }
   &::after {
-    content: "Kliknij by sprawdzić . . .";
+    content:'Kliknij by sprawdzić...';
     right: -250px;
     top: 50%;
     transform: translateY(-50%);
@@ -163,10 +163,12 @@ const GetToKnowOurBlog = styled.h1`
     top:20%;
     font-size:46px;
     font-weight:bolder;
+    font-family:'Nunito';
+    line-height:80px;
     transform:translate(20%,-50%);
-    width:600px;
-    padding:10px 15px;
-    border-bottom:2px solid;
+    padding:5px 20px;
+    border:2px solid;
+    border-radius:20px;
     color: #f5f6fa;
     letter-spacing:4px;
 `;
@@ -175,7 +177,8 @@ const BlogBtn = styled.a`
     color:#fff;
     background-color:transparent;
     font-size:20px;
-    font-weight:bold;
+    font-weight:900;
+    font-family:'Nunito','Saira','Montserrat','Arial','Sans-Serif';
     text-align:center;
     line-height:60px;
     letter-spacing:2px;
@@ -190,7 +193,9 @@ const BlogBtn = styled.a`
     z-index:5;
 
     &:hover{
-      color: rgb(100, 255, 255);
+      border-color:#000;
+      color: #27c3fb;
+      box-shadow:0 0 15px 1px #000;
     }
 
     &::before{
@@ -201,7 +206,7 @@ const BlogBtn = styled.a`
       display:block;
       width:100%;
       height:0;
-      background-color:#130f40;
+      background-color:#000;
       transition:.3s;
       z-index:-1;
     }
