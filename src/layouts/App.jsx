@@ -9,6 +9,7 @@ import LogInPage from "../pages/LogInPage";
 import SignInPage from "../pages/SignInPage";
 import NotFound from "../pages/NotFound";
 import styled, { createGlobalStyle } from "styled-components";
+import BannerSection from "../Components/Patrykcomp/BannerSection";
 
 const Main = styled.main`
   width: 80%;
@@ -28,6 +29,7 @@ class App extends Component {
       <>
         <GlobalStyle />
         <Nav />
+        <Route path="/" exact component={BannerSection} />
         <Main>
           <Switch>
             <Route path="/" exact component={MainPage} />
