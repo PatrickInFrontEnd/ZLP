@@ -86,7 +86,7 @@ const NavBtnStyle = styled.div`
       }
       `;
 
-const NavBtn = styled.div`
+export const NavBtn = styled.div`
       position:relative;
       padding:10px 15px;
       font-family: 'Nunito','Montserrat','Arial','Sans-Serif';
