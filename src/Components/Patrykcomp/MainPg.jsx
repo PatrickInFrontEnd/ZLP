@@ -2,22 +2,40 @@
 
 import React, { Component } from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+import { NavBtn } from "./../../layouts/Nav";
 
 class MainPg extends Component {
   state = {};
   render() {
     return (
-      <Wrap>
-        <BlogSection>
-          <GetToKnowOurBlog>Poznaj naszego bloga!</GetToKnowOurBlog>
-          <BlogBtn>Blog ZLP</BlogBtn>
-          <Blog>Miejsce na Bloga</Blog>
-        </BlogSection>
-        <MainContent id="main">
+      <Wrap id="main">
+        <MainContent>
           <Content>
             <LookWhatIsUp>
               Zerknij śmiało i dołącz do turnieju!
             </LookWhatIsUp>
+            <GamesSection>
+              <GameIMG src="Images/LoL.png" alt="League of Legends" />
+              <GameIMG src="Images/CS.png" alt="Counter Strike" />
+              <GameIMG src="Images/fifa.png" alt="Fifa" width="200px" />
+              <GameIMG src="Images/jDance.png" alt="Just Dance" />
+            </GamesSection>
+            <TournamentDescription>
+              <Description>
+                Skoro odwiedziłeś tę strone to zakładam, że pewnie zamierzasz wziać udział w tegorocznym ZLP. Chcesz udowodnić kto w tej szkole najlepiej włada myszką i klawiaturą? Nic prostszego.
+              </Description>
+              <Description>
+                W zakładce regulamin znajdziesz regulamin rozgrywek,nie jest on skomplikowany, ale ma pomóc w uniknięciu problemów wywołanych niedopowiedzeniami.
+              </Description>
+              <Description>
+                Co w planach? Tam znajdziesz trochę informacji na temat tego co będzie się działo tego dnia w szkole. Mamy parę ciekawych pomysłów, nawet jeśli nie zamierzasz brać udziału w turnieju w trakcie przerw będziesz mógł podejść na piętro, zbić piątkę z kolegami którzy nie będą musieli trudzić się lekcjami tego dnia, a my zajmiemy się tym aby nie było nudno!
+              </Description>
+              <Description>
+                Drabinka - nic prostszego, w tej zakładce znajdować się będzie grafika przedstawiająca wszystkie drużyny biorące udział w zawodach w grze CS:GO i ich drogę do wielkiego finału.
+              </Description>
+              <NavLink to="/rejestracja"><NavBtn isBig isWhite isBorder GreenHover>Zarejestruj się by wziąć udział w turnieju legend!</NavBtn></NavLink>
+            </TournamentDescription>
           </Content>
           <SMediaSection>
             <SMedia content="'Facebook'" bgcHov="#4267B2"><I className="fab fa-facebook-f"></I></SMedia>
@@ -25,6 +43,11 @@ class MainPg extends Component {
             <SMedia content="'Twitch'" bgcHov="#6441A5"><I className="fab fa-twitch"></I></SMedia>
           </SMediaSection>
         </MainContent>
+        <BlogSection>
+          <GetToKnowOurBlog>Poznaj naszego bloga!</GetToKnowOurBlog>
+          <BlogBtn>Blog ZLP</BlogBtn>
+          <Blog>Miejsce na Bloga</Blog>
+        </BlogSection>
       </Wrap>
     );
   }
@@ -119,7 +142,7 @@ const BlogBtn = styled.a`
 
 const MainContent = styled.section`
     min-height:300px;
-    padding:80px 30px 50px;
+    padding:100px 30px;
     background-color:#000;
     color: #1B9CFC;
     font-family:'Montserrat','Saira','Nunito','Arial','Sans-Serif';
@@ -127,8 +150,7 @@ const MainContent = styled.section`
 
 const Content = styled.section`
     min-height:300px;
-    width:90%;
-    margin:0 auto;
+    width:100%;
     text-align:center;
 `;
 
@@ -136,11 +158,52 @@ const LookWhatIsUp = styled.h1`
     width:100%;
     line-height:80px;
     padding:20px 0;
+    margin:0 auto 50px;
     font-size:56px;
     font-weight:700;
     color: #fff;
     border-top:4px solid #1B9CFC;
     border-bottom:4px solid #1B9CFC;
+`;
+
+const GamesSection = styled.section`
+    width:80%;
+    min-height:120px;
+    margin:0 auto;
+    background-color:#0984e3;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-wrap:wrap;
+    flex-direction:row;
+    border:3px solid #0097e6;
+    border-radius:20px;
+    box-shadow:0 0 30px 2px #74b9ff;
+`;
+
+const GameIMG = styled.img`
+    min-width:100px;
+    height:120px;
+`;
+
+const TournamentDescription = styled.section`
+    width:60%;
+    min-height:400px;
+    margin:50px auto;
+    padding:10px 20px;
+    text-align:justify;
+    text-align-last:center;
+    hyphens:auto;
+    word-wrap:break-word;
+`;
+
+const Description = styled.p`
+    font-size:22px;
+    font-weight:700;
+    padding:20px 40px;
+    border-top:2px solid #2f383f;
+    border-bottom:2px solid #2f383f;
+    margin:0 auto 40px;
 `;
 
 const SMediaSection = styled.section`
