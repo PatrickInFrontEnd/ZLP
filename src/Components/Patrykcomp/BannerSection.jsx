@@ -5,7 +5,7 @@ const BannerSection = () => {
   return (
     <BannerWrapper>
       <Banner>Witaj Graczu!</Banner>
-      <BannerBtn href="#">
+      <BannerBtn href="#main">
         <DownArrow className="fas fa-angle-double-down" />
       </BannerBtn>
       <CheckOutTitle>Sprawdź co cię czeka!</CheckOutTitle>
@@ -132,4 +132,5 @@ const CheckOutTitle = styled.h3`
   font-size: 20px;
   font-weight: 400;
   text-align: center;
+  font-family:'Montserrat','Saira','Arial','Sans-Serif';
 `;

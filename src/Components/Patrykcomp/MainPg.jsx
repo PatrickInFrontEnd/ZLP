@@ -13,7 +13,12 @@ class MainPg extends Component {
           <BlogBtn>Blog ZLP</BlogBtn>
           <Blog>Miejsce na Bloga</Blog>
         </BlogSection>
-        <MainContent>
+        <MainContent id="main">
+          <Content>
+            <LookWhatIsUp>
+              Zerknij śmiało i dołącz do turnieju!
+            </LookWhatIsUp>
+          </Content>
           <SMediaSection>
             <SMedia content="'Facebook'" bgcHov="#4267B2"><I className="fab fa-facebook-f"></I></SMedia>
             <SMedia content="'Youtube'" bgcHov="#FF0000"><I className="fab fa-youtube"></I></SMedia>
@@ -114,10 +119,28 @@ const BlogBtn = styled.a`
 
 const MainContent = styled.section`
     min-height:300px;
-    padding:100px 30px 50px;
+    padding:80px 30px 50px;
     background-color:#000;
     color: #1B9CFC;
     font-family:'Montserrat','Saira','Nunito','Arial','Sans-Serif';
+`;
+
+const Content = styled.section`
+    min-height:300px;
+    width:90%;
+    margin:0 auto;
+    text-align:center;
+`;
+
+const LookWhatIsUp = styled.h1`
+    width:100%;
+    line-height:80px;
+    padding:20px 0;
+    font-size:56px;
+    font-weight:700;
+    color: #fff;
+    border-top:4px solid #1B9CFC;
+    border-bottom:4px solid #1B9CFC;
 `;
 
 const SMediaSection = styled.section`
@@ -129,13 +152,13 @@ const SMediaSection = styled.section`
     position:relative;
     width:60%;
     min-height:150px;
-    margin:0 auto;
+    margin:100px auto 0;
     padding:30px 0;
     border-radius:20px;
     border:2px solid;
 
     &::before{
-      content:'Media społecznościowe ZLP';
+      content:'Bądź z nami na bieżąco !';
       position:absolute;
       top:-65px;
       left:-80px;
