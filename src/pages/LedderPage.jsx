@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "bulma";
 import styled from "styled-components";
 
 const Container = styled.div``;
@@ -8,7 +7,13 @@ const Collection = styled.div``;
 const PlaceOfTeam = styled.div``;
 const QuarterfinalColumns = styled.div``;
 const SemiFinalsColumns = styled.div``;
-const H3 = styled.h3;
+const Teams = styled.div``;
+const TeamSquads = styled.div``;
+const H3 = styled.h3``;
+const H1 = styled.h1``;
+const P = styled.p``;
+const I = styled.i``;
+const Icon = styled.div``;
 
 class LedderPage extends Component {
     state = {}
@@ -88,77 +93,77 @@ class LedderPage extends Component {
                                 <P>1/4</P>
                             </PlaceOfTeam>
                         </QuarterfinalColumns>
-                        <Collection>
+                    </Collection>
                 </Ledder>
-                        {/* <Teams>
-                            <div class="teamSquads">
-                                <h1>Nazwa drużyny</h1>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                            </div>
-                            <div class="teamSquads">
-                                <h1>Nazwa drużyny</h1>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                            </div>
-                            <div class="teamSquads">
-                                <h1>Nazwa drużyny</h1>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                            </div>
-                            <div class="teamSquads">
-                                <h1>Nazwa drużyny</h1>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                            </div>
-                            <div class="teamSquads">
-                                <h1>Nazwa drużyny</h1>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                            </div>
-                            <div class="teamSquads">
-                                <h1>Nazwa drużyny</h1>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                            </div>
-                            <div class="teamSquads">
-                                <h1>Nazwa drużyny</h1>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                            </div>
-                            <div class="teamSquads">
-                                <h1>Nazwa drużyny</h1>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                                <p>Imie "NICK" Nazwisko</p>
-                            </div>
-                        </Teams> */}
+                <Teams>
+                    <TeamSquads>
+                        <H1>Nazwa drużyny</H1>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                    </TeamSquads>
+                    <TeamSquads>
+                        <H1>Nazwa drużyny</H1>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                    </TeamSquads>
+                    <TeamSquads>
+                        <H1>Nazwa drużyny</H1>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                    </TeamSquads>
+                    <TeamSquads>
+                        <H1>Nazwa drużyny</H1>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                    </TeamSquads>
+                    <TeamSquads>
+                        <H1>Nazwa drużyny</H1>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                    </TeamSquads>
+                    <TeamSquads>
+                        <H1>Nazwa drużyny</H1>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                    </TeamSquads>
+                    <TeamSquads>
+                        <H1>Nazwa drużyny</H1>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                    </TeamSquads>
+                    <TeamSquads>
+                        <H1>Nazwa drużyny</H1>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                        <P>Imie "NICK" Nazwisko</P>
+                    </TeamSquads>
+                </Teams>
             </Container>
-                    );
-                }
-            }
-            
+        );
+    }
+}
+
 export default LedderPage;
