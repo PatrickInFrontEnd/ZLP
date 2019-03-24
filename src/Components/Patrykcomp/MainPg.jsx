@@ -16,7 +16,7 @@ class MainPg extends Component {
             <GamesSection>
               <GameIMG src="Images/LoL.png" alt="League of Legends" />
               <GameIMG src="Images/CS.png" alt="Counter Strike" />
-              <GameIMG src="Images/fifa.png" alt="Fifa" width="200px" />
+              <GameIMG src="Images/fifa.png" alt="Fifa" />
               <GameIMG src="Images/jDance.png" alt="Just Dance" />
             </GamesSection>
             <TournamentDescription>
