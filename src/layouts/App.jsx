@@ -9,25 +9,30 @@ import LogInPage from "../pages/LogInPage";
 import SignInPage from "../pages/SignInPage";
 import NotFound from "../pages/NotFound";
 import styled, { createGlobalStyle } from "styled-components";
+import BannerSection from "../Components/Patrykcomp/BannerSection";
+import jump from "jump.js-cancelable";
 
 const Main = styled.main`
-  width: 80%;
-  max-width: 1800px;
-  margin: 0 auto;
-  @media only screen and (max-width: 1824px) {
-    width: 100%;
-  }
-  @media only screen and (max-width: 768px) {
-    width: 100%;
-  }
+  width:100%;
 `;
 
 class App extends Component {
+  handleJump = () => {
+    jump(".target", {
+      duration: 500
+    });
+  };
   render() {
     return (
       <>
         <GlobalStyle />
         <Nav />
+        <Route
+          path="/"
+          exact
+          component={BannerSection}
+          handleJump={this.handleJump}
+        />
         <Main>
           <Switch>
             <Route path="/" exact component={MainPage} />
