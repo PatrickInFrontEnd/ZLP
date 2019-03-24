@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const BannerSection = () => {
+const BannerSection = props => {
   return (
     <BannerWrapper>
       <Banner>Witaj Graczu!</Banner>
-      <BannerBtn href="#main">
+      <BannerBtn onClick={props.handleJump} href="#main">
         <DownArrow className="fas fa-angle-double-down" />
       </BannerBtn>
       <CheckOutTitle>Sprawdź co cię czeka!</CheckOutTitle>
@@ -132,5 +132,5 @@ const CheckOutTitle = styled.h3`
   font-size: 20px;
   font-weight: 400;
   text-align: center;
-  font-family:'Montserrat','Saira','Arial','Sans-Serif';
+  font-family: "Montserrat", "Saira", "Arial", "Sans-Serif";
 `;
