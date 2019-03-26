@@ -92,7 +92,7 @@ class SignInPage extends Component {
               onChange={this.handleChange}
               value={this.state.email}
               data-name="email"
-              placeholder="email"
+              placeholder="Email"
             />
             <span className="is-medium icon is-left">
               <i className="fas fa-envelope fa-xs" />
@@ -107,7 +107,7 @@ class SignInPage extends Component {
               onChange={this.handleChange}
               value={this.state.userName}
               data-name="userName"
-              placeholder="nazwa użytkownika"
+              placeholder="Nazwa użytkownika"
             />
             <span className="is-medium icon is-left">
               <i className="fas  fa-user" />
@@ -122,7 +122,7 @@ class SignInPage extends Component {
               onChange={this.handleChange}
               value={this.state.password}
               data-name="password"
-              placeholder="hasło"
+              placeholder="Hasło"
             />
             <span className="is-medium icon is-left">
               <i className="fas fa-lock" />
@@ -137,7 +137,7 @@ class SignInPage extends Component {
               onChange={this.handleChange}
               value={this.state.reapettedPassword}
               data-name="reapettedPassword"
-              placeholder="powtórz hasło"
+              placeholder="Powtórz hasło"
             />
             <span className="is-medium icon is-left">
               <i className="fas fa-lock" />

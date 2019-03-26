@@ -79,7 +79,7 @@ class LogInPage extends Component {
               onChange={this.handleChange}
               value={this.state.name}
               data-name="name"
-              placeholder="email"
+              placeholder="Email"
             />
             <span className="is-medium icon is-left">
               <i className="fas fa-envelope fa-xs" />
@@ -94,7 +94,7 @@ class LogInPage extends Component {
               onChange={this.handleChange}
               value={this.state.password}
               data-name="password"
-              placeholder="hasło"
+              placeholder="Hasło"
             />
             <span className="is-medium icon is-left">
               <i className="fas fa-lock" />
