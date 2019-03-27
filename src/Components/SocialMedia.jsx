@@ -8,13 +8,13 @@ class SocialMedia extends Component {
   render() {
     return (
       <SMediaSection>
-        <SMedia href="https://www.facebook.com/ckziuzbaszynek/" content="'Facebook'" bgcHov="#4267B2">
+        <SMedia href="https://www.facebook.com/ckziuzbaszynek/" bgcHov="#4267B2">
           <I className="fab fa-facebook-f" />
         </SMedia>
-        <SMedia href="https://www.youtube.com/channel/UCB8Ky1jlPbiZe5Fm_EUCxCg" content="'Youtube'" bgcHov="#FF0000">
+        <SMedia href="https://www.youtube.com/channel/UCB8Ky1jlPbiZe5Fm_EUCxCg" bgcHov="#FF0000">
           <I className="fab fa-youtube" />
         </SMedia>
-        <SMedia href="https://www.twitch.tv/zlpstream" content="'Twitch'" bgcHov="#6441A5">
+        <SMedia href="https://www.twitch.tv/zlpstream" bgcHov="#6441A5">
           <I className="fab fa-twitch" />
         </SMedia>
       </SMediaSection>
@@ -65,51 +65,6 @@ const SMedia = styled.a`
   &:hover {
     background-color: ${({ bgcHov }) => bgcHov};
     color: #fff;
-    box-shadow: inset 0 0 15px 5px #111;
-  }
-
-  &::before,
-  &::after {
-    box-sizing: content-box;
-    position: absolute;
-    color: #fff;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s cubic-bezier(0.45, 0.61, 0.355, 1);
-  }
-
-  &::before {
-    content: "";
-    width: 25px;
-    height: 25px;
-    transform: translateY(-50%) rotate(45deg);
-    background-color: #fff;
-    right: -42px;
-    top: 50%;
-  }
-  &::after {
-    content: ${({ content }) => content};
-    right: -250px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 200px;
-    padding: 0 10px;
-    border-radius: 20px;
-    border: 2px solid;
-    font-size: 14px;
-    font-weight: bolder;
-    background-color: #000;
-    z-index: 2;
-  }
-
-  &:hover::after,
-  &:hover::before {
-    opacity: 1;
-    visibility: visible;
   }
 `;
 
