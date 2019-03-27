@@ -4,7 +4,9 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { NavBtn } from "./../../layouts/Nav";
-import SocialMedia from './../SocialMedia'
+import SocialMedia from './../SocialMedia';
+import { Colors } from './../Colors';
+import { BlueHeader } from './../BlueHeader';
 
 class MainPg extends Component {
   state = {};
@@ -45,17 +47,19 @@ class MainPg extends Component {
                 zawodach w grze CS:GO i ich drogę do wielkiego finału.
               </Description>
               <NavLink to="/rejestracja">
-                <NavBtn isBig isWhite isBorder GreenHover>
+                <NAVBTN isBig isWhite isBorder GreenHover>
                   Zarejestruj się by wziąć udział w turnieju legend!
-                </NavBtn>
+                </NAVBTN>
               </NavLink>
             </TournamentDescription>
           </Content>
           <SocialMedia />
         </MainContent>
         <BlogSection>
-          <GetToKnowOurBlog>Poznaj naszego bloga!</GetToKnowOurBlog>
-          <BlogBtn>Blog ZLP</BlogBtn>
+          <GetToKnowOurBlog>
+            Poznaj naszego bloga!
+            <BlogBtn>Przejdź na bloga</BlogBtn>
+          </GetToKnowOurBlog>
           <Blog>Miejsce na Bloga</Blog>
         </BlogSection>
       </Wrap>
@@ -81,26 +85,28 @@ const BlogSection = styled.section`
   overflow: hidden;
 `;
 
-const GetToKnowOurBlog = styled.h1`
+const GetToKnowOurBlog = styled(BlueHeader)`
   position: absolute;
-  top: 20%;
-  font-size: 46px;
-  font-weight: bolder;
-  transform: translate(20%, -50%);
-  width: 600px;
-  padding: 10px 15px;
-  border-bottom: 2px solid;
-  color: #f5f6fa;
+  top: 15%;
+  left:50%;
+  width:70%;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  font-size: 36px;
+  font-weight: 900;
+  transform: translate(-50%,-50%);
   letter-spacing: 4px;
+  z-index:4;
 `;
 
 const Blog = styled.div`
   position: absolute;
   bottom: 10%;
-  left: 60%;
-  transform: translate(-40%, 10%);
-  width: 60%;
-  height: 60%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  width: 70%;
+  height: 65%;
   font-size: 20px;
   font-weight: 400;
   text-align: center;
@@ -110,51 +116,32 @@ const Blog = styled.div`
 `;
 
 const BlogBtn = styled.a`
-  color: #fff;
+  color:${Colors.white};
   background-color: transparent;
   font-size: 20px;
-  font-weight: 900;
   font-family: "Nunito", "Saira", "Montserrat", "Arial", "Sans-Serif";
   text-align: center;
   line-height: 60px;
+  font-weight:700;
   letter-spacing: 2px;
-  width: 300px;
-  border: 2px solid;
+  padding:0 30px;
+  border: 2px solid ${Colors.green};
   border-radius: 10px;
   transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transform: translate(40%, -100%);
-  position: absolute;
-  top: 50%;
   overflow: hidden;
   z-index: 5;
 
   &:hover {
-    border-color: #15a1ca;
-    color: #fff;
-    box-shadow: 0 0 15px 1px #15a1ca;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: block;
-    width: 100%;
-    height: 0;
-    background-color: #15a1ca;
-    transition: 0.3s;
-    z-index: -1;
-  }
-
-  &:hover::before {
-    height: 100%;
+    color:${Colors.blue_nav};
+    border: 2px solid;
+    background-color:transparent;
+    box-shadow: 0 0 30px 1px ${Colors.blue_text};
   }
 `;
 
 const MainContent = styled.section`
   min-height: 300px;
-  padding: 100px 30px;
+  padding: 100px 30px 50px;
   background-color: #000;
   color: #1b9cfc;
   font-family: "Montserrat", "Saira", "Nunito", "Arial", "Sans-Serif";
@@ -216,4 +203,9 @@ const Description = styled.p`
   border-top: 2px solid #2f383f;
   border-bottom: 2px solid #2f383f;
   margin: 0 auto 40px;
+`;
+
+const NAVBTN = styled(NavBtn)`
+    width:80%;
+    margin:0 auto;
 `;
