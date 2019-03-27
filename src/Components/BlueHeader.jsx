@@ -7,6 +7,7 @@ export const BlueHeader = styled.h1`
   margin: 0 auto 50px;
   font-size: 56px;
   font-weight: 700;
+  font-family:'Nunito','Montserrat','Arial','Sans-Serif';
   color: #fff;
   border-top: 4px solid #1b9cfc;
   border-bottom: 4px solid #1b9cfc;
