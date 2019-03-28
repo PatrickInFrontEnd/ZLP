@@ -1,6 +1,8 @@
 import styled from 'styled-components';
+import { Colors } from './../Components/Colors';
 
 export const P = styled.p`
+  color:${Colors.blue_text};
   font-size: 22px;
   font-weight: 700;
   padding: 20px 40px;

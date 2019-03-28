@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Nav from "./Nav.jsx";
 import { Route, Switch } from "react-router-dom";
 import MainPage from "../pages/MainPage";
-import StatutePage from "../pages/SatutePage";
+import StatutePage from "../pages/StatutePage";
 import PlansPage from "../pages/PlansPage";
 import LedderPage from "../pages/LedderPage";
 import LogInPage from "../pages/LogInPage";
@@ -59,7 +59,8 @@ const GlobalStyle = createGlobalStyle`
       text-decoration: none;
     }
     body{
-      background-color:rgb(44, 62, 80);
+      background-color:#000;
+      font-family:'Montserrat','Nunito','Arial','Sans-Serif';
     }
 
     a,span,button{

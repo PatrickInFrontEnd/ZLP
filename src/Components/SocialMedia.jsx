@@ -8,10 +8,10 @@ class SocialMedia extends Component {
   render() {
     return (
       <SMediaSection>
-        <SMedia href="https://www.facebook.com/ckziuzbaszynek/" bgcHov="#4267B2">
+        <SMedia href="https://www.facebook.com/ckziuzbaszynek/" bgcHov="#3b5998">
           <I className="fab fa-facebook-f" />
         </SMedia>
-        <SMedia href="https://www.youtube.com/channel/UCB8Ky1jlPbiZe5Fm_EUCxCg" bgcHov="#FF0000">
+        <SMedia href="https://www.youtube.com/channel/UCB8Ky1jlPbiZe5Fm_EUCxCg" bgcHov="#cc181e">
           <I className="fab fa-youtube" />
         </SMedia>
         <SMedia href="https://www.twitch.tv/zlpstream" bgcHov="#6441A5">
