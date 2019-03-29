@@ -4,9 +4,9 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { NavBtn } from "./../../layouts/Nav";
-import SocialMedia from './../SocialMedia';
-import { Colors } from './../Colors';
-import { BlueHeader } from './../BlueHeader';
+import SocialMedia from "./../SocialMedia";
+import { Colors } from "./../Colors";
+import { BlueHeader } from "./../BlueHeader";
 
 class MainPg extends Component {
   state = {};
@@ -58,7 +58,7 @@ class MainPg extends Component {
         <BlogSection>
           <GetToKnowOurBlog>
             Poznaj naszego bloga!
-            <BlogBtn>Przejdź na bloga</BlogBtn>
+            <BlogBtn to="/blog">Przejdź na bloga</BlogBtn>
           </GetToKnowOurBlog>
           <Blog>Miejsce na Bloga</Blog>
         </BlogSection>
@@ -88,16 +88,16 @@ const BlogSection = styled.section`
 const GetToKnowOurBlog = styled(BlueHeader)`
   position: absolute;
   top: 15%;
-  left:50%;
-  width:70%;
-  display:flex;
-  align-items:center;
-  justify-content:space-around;
+  left: 50%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   font-size: 36px;
   font-weight: 900;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   letter-spacing: 4px;
-  z-index:4;
+  z-index: 4;
 `;
 
 const Blog = styled.div`
@@ -111,31 +111,31 @@ const Blog = styled.div`
   font-weight: 400;
   text-align: center;
   background-color: #000;
-  border:2px solid;
-  border-color:#fff;
+  border: 2px solid;
+  border-color: #fff;
 `;
 
-const BlogBtn = styled.a`
+const BlogBtn = styled(NavLink)`
   position: relative;
-  color:${Colors.white};
+  color: ${Colors.white};
   background-color: transparent;
   font-size: 20px;
   font-family: "Nunito", "Saira", "Montserrat", "Arial", "Sans-Serif";
   text-align: center;
   line-height: 60px;
-  font-weight:700;
+  font-weight: 700;
   letter-spacing: 2px;
-  padding:0 30px;
+  padding: 0 30px;
   border: 2px solid ${Colors.green};
   border-radius: 10px;
-  transition:all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   overflow: hidden;
   z-index: 5;
 
   &:hover {
     border: 2px solid;
-    background-color:transparent;
-    color:${Colors.blue_text};
+    background-color: transparent;
+    color: ${Colors.blue_text};
     box-shadow: 0 0 30px 1px ${Colors.blue_text};
   }
 `;
@@ -207,6 +207,6 @@ const Description = styled.p`
 `;
 
 const NAVBTN = styled(NavBtn)`
-    width:80%;
-    margin:0 auto;
+  width: 80%;
+  margin: 0 auto;
 `;
