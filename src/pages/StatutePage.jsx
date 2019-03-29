@@ -4,25 +4,25 @@ import { BlueHeader } from './../Components/BlueHeader';
 import { Header } from './../Components/Header';
 import { P } from './../Components/P';
 import { Colors } from './../Components/Colors';
+import { SHeader } from './../Components/SHeader';
+import { Wrapper } from './../Components/Wrapper';
 
 class StatutePage extends Component {
     state = {}
     render() {
         return (
             <Wrapper>
-                <MYBlueHeader>Teraz trochę formalności . . .</MYBlueHeader>
+                <MYBlueHeader>Teraz trochę formalności...</MYBlueHeader>
                 <SHeader>Jeśli zdecydowałeś się na udział w turnieju, musisz poznać kilka zasad zawartych w tym regulaminie. Pozwoli to na miłą rozgrywkę bez niepotrzebnych niedomówień.</SHeader>
                 <StatuteHeader>Podstawowe zasady turnieju :</StatuteHeader>
-                <P>
-                    <MyP> 1. Udział w turnieju jest jednoznaczny z akceptacją niniejszego regulaminu.</MyP>
-                    <MyP> 2. Obowiązuje zakaz obrażania i wyzywania przeciwników.</MyP>
-                    <MyP> 3. Nad rozgrywkami będą czuwać administratorzy turnieju.</MyP>
-                    <MyP> 4. Na finał turnieju w Counter Stirke'a zakfalifikuje się 8 drużyn.</MyP>
-                    <MyP> 5. Uczestnicy mogą przynieść swoją myszkę, klawiaturę, słuchawki i podkładkę w celu zapewnienia wyższego komfortu rozgrywki.</MyP>
-                    <MyP> 6. Gramy na ustawieniach niskich w celu uzyskania płynności rozgrywki, a każdy proszony jest o przyniesienie ze sobą konfiguracji, aby nie marnować na nią zbyt dużo czasu.</MyP>
-                    <MyP> 7. Przed każdym meczem gracz będzie miał 20 minut na przygotowanie stanowiska.</MyP>
-                    <MyP> 8. Każdy gracz jest zobowiązany do używania nicku oraz tagu drużyny wprowadzonego w formularzu zgłoszeniowym.</MyP>
-                </P>
+                <MyP> 1. Udział w turnieju jest jednoznaczny z akceptacją niniejszego regulaminu.</MyP>
+                <MyP> 2. Obowiązuje zakaz obrażania i wyzywania przeciwników.</MyP>
+                <MyP> 3. Nad rozgrywkami będą czuwać administratorzy turnieju.</MyP>
+                <MyP> 4. Na finał turnieju w Counter Stirke'a zakfalifikuje się 8 drużyn.</MyP>
+                <MyP> 5. Uczestnicy mogą przynieść swoją myszkę, klawiaturę, słuchawki i podkładkę w celu zapewnienia wyższego komfortu rozgrywki.</MyP>
+                <MyP> 6. Gramy na ustawieniach niskich w celu uzyskania płynności rozgrywki, a każdy proszony jest o przyniesienie ze sobą konfiguracji, aby nie marnować na nią zbyt dużo czasu.</MyP>
+                <MyP> 7. Przed każdym meczem gracz będzie miał 20 minut na przygotowanie stanowiska.</MyP>
+                <MyP> 8. Każdy gracz jest zobowiązany do używania nicku oraz tagu drużyny wprowadzonego w formularzu zgłoszeniowym.</MyP>
                 <MYBlueHeader is100 isFZ>
                     Dla zawodników grających w Leauge of Legends
                 </MYBlueHeader>
@@ -38,24 +38,14 @@ class StatutePage extends Component {
 
 export default StatutePage;
 
-const Wrapper = styled.div`
-            width:100%;
-            min-height:calc(100vh -80px);
-            padding:30px 60px 1px;
-        `;
-
 const MYBlueHeader = styled(BlueHeader)`
             width:${(props) => props.is100 ? '100%' : '80%'};
             text-align:center;
             font-size:${(props) => props.isFZ ? '42px' : '56px'};
-        `;
 
-const SHeader = styled(Header)`
-            border:none;
-            line-height:180%;
-            width:100%;
-            font-size:20px;
-            margin-bottom:50px;
+            @media screen and (max-width:640px) {
+                width:100%;
+            }
         `;
 
 const StatuteHeader = styled(Header)`
@@ -67,10 +57,38 @@ const StatuteHeader = styled(Header)`
             border-radius:0;
             border:none;
             border-bottom:2px solid ${Colors.white};
+
+            @media screen and (max-width:790px) {
+                padding:20px 10px;
+                font-size:24px;
+            }
+            @media screen and (max-width:680px) {
+                padding:20px 0px;
+                font-size:22px;
+            }
 `;
 
 const MyP = styled(P)`
     border:none;
     margin:0 0 20px;
-    text-align:center;
+    text-align:left;
+    text-align-last:left;
+
+    @media screen and (max-width:1200px) {
+                font-size:20px;
+            }
+    @media screen and (max-width:1100px) {
+        padding:10px 20px;
+    }
+    @media screen and (max-width:830px) {
+        padding:10px;
+        text-align:center;
+        text-align-last:center;
+        font-size: 18px;
+    }
+    @media screen and (max-width:670px) {
+        padding:0;
+        text-align:center;
+        text-align-last:center;
+    }
 `;

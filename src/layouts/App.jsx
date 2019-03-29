@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import Nav from "./Nav.jsx";
 import { Route, Switch } from "react-router-dom";
+import Nav from "./Nav.jsx";
 import MainPage from "../pages/MainPage";
+import BlogPage from "../pages/BlogPage";
 import StatutePage from "../pages/StatutePage";
 import PlansPage from "../pages/PlansPage";
 import LedderPage from "../pages/LedderPage";
@@ -37,6 +38,7 @@ class App extends Component {
           <Switch>
             <Route path="/" exact component={MainPage} />
             <Route path="/regulamin" component={StatutePage} />
+            <Route path="/blog" component={BlogPage} />
             <Route path="/plany" component={PlansPage} />
             <Route path="/drabinka" component={LedderPage} />
             <Route path="/logowanie" component={LogInPage} />

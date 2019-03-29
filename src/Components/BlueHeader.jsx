@@ -12,4 +12,21 @@ export const BlueHeader = styled.h1`
   border-top: 4px solid #1b9cfc;
   border-bottom: 4px solid #1b9cfc;
   text-align:center;
+
+  @media screen and (max-width:1470px){
+    font-size:36px;
+    line-height:60px;
+  }
+  @media screen and (max-width:880px){
+    font-size:28px;
+    line-height:60px;
+  }
+  @media screen and (max-width:680px){
+    font-size:24px;
+    line-height:40px;
+  }
+  @media screen and (max-width:420px){
+    font-size:22px;
+    line-height:40px;
+  }
 `;

@@ -9,4 +9,6 @@ export const P = styled.p`
   border-top: 2px solid #2f383f;
   border-bottom: 2px solid #2f383f;
   margin: 0 auto 40px;
+  text-align:justify;
+  text-align-last:center;
 `;

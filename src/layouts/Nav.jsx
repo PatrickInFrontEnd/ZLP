@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import styled from 'styled-components';
+import { Colors } from "../Components/Colors";
+import { hamburgerAnimation } from './Hamburger';
 
 class Nav extends Component {
   state = {};
@@ -12,12 +14,18 @@ class Nav extends Component {
         </NavLink>
         <NavSection>
           <NavBtnStyle><NavLink to="/"><NavBtn>Strona Główna</NavBtn></NavLink></NavBtnStyle>
+          <NavBtnStyle><NavLink to="/blog"><NavBtn>Blog</NavBtn></NavLink></NavBtnStyle>
           <NavBtnStyle><NavLink to="/drabinka"><NavBtn>Drabinka</NavBtn></NavLink></NavBtnStyle>
           <NavBtnStyle><NavLink to="/regulamin"><NavBtn>Regulamin</NavBtn></NavLink></NavBtnStyle>
           <NavBtnStyle><NavLink to="/plany"><NavBtn>Co w planach</NavBtn></NavLink></NavBtnStyle>
           <NavBtnStyle><NavLink to="/rejestracja"><NavBtn isBig isWhite isBorder GreenHover>Zarejestruj się</NavBtn></NavLink></NavBtnStyle>
           <NavBtnStyle><NavLink to="/logowanie"><NavBtn isBig isWhite isBorder GreenHover>Zaloguj się</NavBtn></NavLink></NavBtnStyle>
         </NavSection>
+        <HamburgerBtn onClick={hamburgerAnimation}>
+          <Span></Span>
+          <Span></Span>
+          <Span></Span>
+        </HamburgerBtn>
       </Navigation>
     );
   }
@@ -76,8 +84,8 @@ const NavBtnStyle = styled.div`
       transition: .2s ease-in-out all;
       }
 
-      &:nth-of-type(5)::before,
-      &:nth-of-type(6)::before{
+      &:nth-of-type(6)::before,
+      &:nth-of-type(7)::before{
         display:none;
       }
 
@@ -92,7 +100,7 @@ export const NavBtn = styled.div`
       font-family: 'Nunito','Montserrat','Arial','Sans-Serif';
       font-size: ${(props) => props.isBig ? '22px' : '18px'};
       font-weight:700;
-      color: #05A1E9;
+      color: ${Colors.blue_nav};
       border: ${(props) => props.isBorder ? '2px solid' : 'none'};
       border-radius:10px;
       transition:.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) all;
@@ -101,4 +109,30 @@ export const NavBtn = styled.div`
         color:#fff;
         border-color:#1abc9c;
       }
+`;
+
+const HamburgerBtn = styled.div`
+    position: relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    top:10px;
+    width:60px;
+    height:60px;
+    padding:10px;
+    border-radius:50%;
+    background-color: ${Colors.bgColor};
+    cursor: pointer;
+`;
+
+const Span = styled.span`
+    position: relative;
+    top:2px;
+    display:block;
+    width:100%;
+    height:5px;
+    margin:0 0 3px;
+    border-radius:2px;
+    background-color: #3a91ca;
 `;
