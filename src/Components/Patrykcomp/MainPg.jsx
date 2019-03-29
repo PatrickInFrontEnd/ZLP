@@ -24,12 +24,12 @@ class MainPg extends Component {
             </GamesSection>
             <TournamentDescription>
               <Description>
-                Skoro odwiedziłeś tę strone to zakładam, że pewnie zamierzasz
-                wziać udział w tegorocznym ZLP. Chcesz udowodnić kto w tej
+                Skoro odwiedziłeś tę stronę to zakładam, że pewnie zamierzasz
+                wziąć udział w tegorocznym ZLP. Chcesz udowodnić kto w tej
                 szkole najlepiej włada myszką i klawiaturą? Nic prostszego.
               </Description>
               <Description>
-                W zakładce regulamin znajdziesz regulamin rozgrywek,nie jest on
+                W zakładce regulamin znajdziesz regulamin rozgrywek, nie jest on
                 skomplikowany, ale ma pomóc w uniknięciu problemów wywołanych
                 niedopowiedzeniami.
               </Description>
@@ -43,7 +43,7 @@ class MainPg extends Component {
               </Description>
               <Description>
                 Drabinka - nic prostszego, w tej zakładce znajdować się będzie
-                grafika przedstawiająca wszystkie drużyny biorące udział w
+                tabela przedstawiająca wszystkie drużyny biorące udział w
                 zawodach w grze CS:GO i ich drogę do wielkiego finału.
               </Description>
               <NavLink to="/rejestracja">
