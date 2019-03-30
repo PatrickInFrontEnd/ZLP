@@ -163,18 +163,27 @@ const HamburgerBtn = styled.div`
   padding: 10px;
   border-radius: 50%;
   background-color: ${Colors.bgColor};
+  transition:.5s;
   cursor: pointer;
+
+  &:hover{
+    background-color: ${Colors.white};
+  }
+  &:hover span{
+    background-color: ${Colors.bgColor};
+  }
 `;
 
 const Span = styled.span`
   position: relative;
   top: 2px;
   display: block;
-  width: 45px;
-  height: 5px;
-  margin: 0 0 6px;
+  width: 100%;
+  height: 4px;
+  margin: 0 0 4px;
   border-radius: 2px;
   background-color: #3a91ca;
+  transition:1s;
   &:nth-child(1) {
     opacity: ${props => (props.isClicked ? 0 : 1)};
     visibility: ${props => (props.isClicked ? "hidden" : "visible")};
@@ -194,6 +203,8 @@ const Span = styled.span`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
+    width:80%;
+    height: 3px;
   }
   &:nth-child(5) {
     opacity: ${props => (props.isClicked ? 1 : 0)};
@@ -202,5 +213,7 @@ const Span = styled.span`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
+    width:80%;
+    height: 3px;
   }
 `;
