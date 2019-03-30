@@ -40,6 +40,15 @@ const SMediaSection = styled.section`
   border-radius: 20px;
   border: 2px solid;
 
+  @media screen and (min-width:1260px){
+      max-width:830px;
+    }
+    
+    @media screen and (max-width:975px){
+      flex-direction:column;
+      max-width:300px;
+    }
+
   &::before {
     content: "Bądź z nami na bieżąco !";
     position: absolute;
@@ -48,6 +57,17 @@ const SMediaSection = styled.section`
     font-size: 24px;
     font-weight: 900;
     color: ${Colors.white};
+
+    @media screen and (max-width:975px){
+      left:50%;
+      transform:translateX(-50%);
+      width:50vw;
+    }
+    @media screen and (max-width:700px){
+      left:50%;
+      transform:translateX(-50%);
+      width:70vw;
+    }
   }
 `;
 

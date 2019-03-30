@@ -5,7 +5,7 @@ import MainPage from "../pages/MainPage";
 import BlogPage from "../pages/BlogPage";
 import StatutePage from "../pages/StatutePage";
 import PlansPage from "../pages/PlansPage";
-import LedderPage from "../pages/LedderPage";
+import LedderPage from "../pages/LadderPage";
 import LogInPage from "../pages/LogInPage";
 import SignInPage from "../pages/SignInPage";
 import NotFound from "../pages/NotFound";

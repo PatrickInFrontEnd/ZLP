@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Colors } from "../Colors";
 
 const BannerSection = props => {
   return (
@@ -20,10 +21,11 @@ const BannerWrapper = styled.div`
   position: relative;
   width: 100%;
   min-height: calc(100vh - 80px);
+  max-height:1080px;
   background-image: url("../../../Images/baner.png");
   background-size: cover;
   background-position: center center;
-  color: #fff;
+  color: ${Colors.white};
 `;
 
 const Banner = styled.h1`
@@ -40,6 +42,26 @@ const Banner = styled.h1`
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 4px;
+
+  @media screen and (max-width:1200px){
+      font-size:42px;
+    }
+    @media screen and (max-width:990px){
+      width:60%;
+    }
+    @media screen and (max-width:840px){
+      width:80%;
+    }
+    @media screen and (max-width:640px){
+      font-size:36px;
+    }
+    @media screen and (max-width:560px){
+      width:90%;
+    }
+    @media screen and (max-width:440px){
+      width:90%;
+      font-size:28px;
+    }
 `;
 
 const BannerBtn = styled.a`
@@ -54,6 +76,17 @@ const BannerBtn = styled.a`
   border-right: 4px solid;
   color: #fff;
 
+  @media screen and (max-height:550px){
+      left:60%;
+      top:65%;
+    }
+    @media screen and (max-height:550px) and (max-width:960px){
+      left:75%;
+    }
+    @media screen and (max-height:550px) and (max-width:640px){
+      left:70%;
+    } 
+
   &::before,
   &::after {
     box-sizing: content-box;
@@ -62,6 +95,16 @@ const BannerBtn = styled.a`
     opacity: 0;
     visibility: hidden;
     transition: 0.3s cubic-bezier(0.45, 0.61, 0.355, 1);
+
+    @media screen and (max-width:660px){
+      display:none;
+      content:none;
+    }
+
+    @media screen and (max-height:550px){
+      display:none;
+      content:none;
+    }
   }
 
   &::before {
@@ -90,6 +133,16 @@ const BannerBtn = styled.a`
     font-weight: bolder;
     background-color: #000;
     z-index: 2;
+
+    @media screen and (max-width:660px){
+      display:none;
+      content:none;
+    }
+
+    @media screen and (max-height:550px){
+      display:none;
+      content:none;
+    }
   }
 
   &:hover::after,
@@ -132,5 +185,13 @@ const CheckOutTitle = styled.h3`
   font-size: 20px;
   font-weight: 400;
   text-align: center;
-  font-family: "Montserrat", "Saira", "Arial", "Sans-Serif";
+  font-family: 'Nunito',"Montserrat", "Saira", "Arial", "Sans-Serif";
+
+  @media screen and (max-height:550px){
+      bottom:35%;
+      left:40%;
+    }
+    @media screen and (max-height:550px) and (max-width:960px){
+      left:35%;
+    }
 `;

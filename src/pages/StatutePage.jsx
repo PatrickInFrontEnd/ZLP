@@ -82,6 +82,7 @@ const MyP = styled(P)`
     }
     @media screen and (max-width:830px) {
         padding:10px;
+        margin:0 auto 20px;
         text-align:center;
         text-align-last:center;
         font-size: 18px;

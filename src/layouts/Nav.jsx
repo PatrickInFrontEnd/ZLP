@@ -90,14 +90,15 @@ const Navigation = styled.nav`
   background-color: #11111c;
   border-bottom: 2px solid #000;
   z-index: 10;
-/* TODO: */
-  /* @media screen and (max-width:1400px){
+
+  @media screen and (max-width:1450px){
     justify-content:space-between;
-  } */
+  }
 `;
 
 const IMG = styled.img`
   height: 70px;
+  max-height:100%;
   width: 204px;
   margin-top: 5px;
 `;
@@ -108,12 +109,12 @@ const NavSection = styled.div`
   align-items: center;
   width: 80%;
   height: 100%;
-/* TODO: */
-  /* @media screen and (max-width:1400px){
+
+  @media screen and (max-width:1450px){
     visibility:hidden;
     opacity:0;
     width:0;
-  } */
+  }
 `;
 
 const NavBtnStyle = styled.div`
@@ -171,19 +172,19 @@ const HamburgerBtn = styled.div`
   width: 60px;
   height: 60px;
   padding: 10px;
-  margin:0 50px 0 0;
+  margin:0 10px 0 0;
   border-radius: 50%;
   border:2px solid;
   background-color:transparent;
   color:${Colors.blue_nav};
   transition:.5s;
   cursor: pointer;
-/* TODO: */
-  /* @media screen and (min-width:1400px){
+
+  @media screen and (min-width:1450px){
     visibility:hidden;
     opacity:0;
     display:none;
-  } */
+  }
 
   &:hover{
     background-color: ${Colors.white};
