@@ -12,6 +12,7 @@ import NotFound from "../pages/NotFound";
 import styled, { createGlobalStyle } from "styled-components";
 import BannerSection from "../Components/Patrykcomp/BannerSection";
 import jump from "jump.js-cancelable";
+import { Colors } from "../Components/Colors";
 
 const Main = styled.main`
   width:100%;
@@ -61,7 +62,7 @@ const GlobalStyle = createGlobalStyle`
       text-decoration: none;
     }
     body{
-      background-color:#000;
+      background-color:${Colors.bgColor};
       font-family:'Montserrat','Nunito','Arial','Sans-Serif';
     }
 

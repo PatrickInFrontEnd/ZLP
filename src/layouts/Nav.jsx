@@ -87,9 +87,13 @@ const Navigation = styled.nav`
   width: 100%;
   height: 80px;
   padding: 0 20px;
-  background-color: #20202c;
-  border-bottom: 2px solid #444;
+  background-color: #11111c;
+  border-bottom: 2px solid #000;
   z-index: 10;
+/* TODO: */
+  /* @media screen and (max-width:1400px){
+    justify-content:space-between;
+  } */
 `;
 
 const IMG = styled.img`
@@ -104,6 +108,12 @@ const NavSection = styled.div`
   align-items: center;
   width: 80%;
   height: 100%;
+/* TODO: */
+  /* @media screen and (max-width:1400px){
+    visibility:hidden;
+    opacity:0;
+    width:0;
+  } */
 `;
 
 const NavBtnStyle = styled.div`
@@ -161,16 +171,26 @@ const HamburgerBtn = styled.div`
   width: 60px;
   height: 60px;
   padding: 10px;
+  margin:0 50px 0 0;
   border-radius: 50%;
-  background-color: ${Colors.bgColor};
+  border:2px solid;
+  background-color:transparent;
+  color:${Colors.blue_nav};
   transition:.5s;
   cursor: pointer;
+/* TODO: */
+  /* @media screen and (min-width:1400px){
+    visibility:hidden;
+    opacity:0;
+    display:none;
+  } */
 
   &:hover{
     background-color: ${Colors.white};
+    color:#000;
   }
   &:hover span{
-    background-color: ${Colors.bgColor};
+    background-color: #000;
   }
 `;
 
@@ -179,9 +199,8 @@ const Span = styled.span`
   top: 2px;
   display: block;
   width: 100%;
-  height: 4px;
-  margin: 0 0 4px;
-  border-radius: 2px;
+  height: 3px;
+  margin: 0 0 5px;
   background-color: #3a91ca;
   transition:1s;
   &:nth-child(1) {

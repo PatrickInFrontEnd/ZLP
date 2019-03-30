@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Colors } from './Colors';
 
 /* SOCIAL MEDIA is converted as component. WRITE '<SocialMedia/>' to add this. */
 
@@ -46,7 +47,7 @@ const SMediaSection = styled.section`
     left: -80px;
     font-size: 24px;
     font-weight: 900;
-    color: #fff;
+    color: ${Colors.white};
   }
 `;
 

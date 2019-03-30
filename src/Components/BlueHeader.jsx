@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Colors } from './Colors';
 
 export const BlueHeader = styled.h1`
   width: 100%;
@@ -8,7 +9,7 @@ export const BlueHeader = styled.h1`
   font-size:${(props) => props.isFZ ? '42px' : '56px'};
   font-weight: 700;
   font-family:'Nunito','Montserrat','Arial','Sans-Serif';
-  color: #fff;
+  color: ${Colors.white};
   border-top: 4px solid #1b9cfc;
   border-bottom: 4px solid #1b9cfc;
   text-align:center;

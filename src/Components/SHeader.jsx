@@ -22,7 +22,6 @@ export const SHeader = styled(Header)`
             }
             @media screen and (max-width:640px) {
                 text-align:center;
-                padding:0 20px;
-                font-size:14px;
+                padding:0 ;
             }
         `;

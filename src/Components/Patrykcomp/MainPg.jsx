@@ -71,7 +71,7 @@ export default MainPg;
 
 const Wrap = styled.div`
   width: 100%;
-  color: #fff;
+  color: ${Colors.white};
 `;
 
 const BlogSection = styled.section`
@@ -79,7 +79,7 @@ const BlogSection = styled.section`
   height: calc(100vh - 80px);
   position: relative;
   /* background-image: linear-gradient(55deg, #0a3d62 0% 45%, #079992 55% 100%); */
-  background-color: #000;
+  background-color: ${Colors.bgColor};
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -136,14 +136,14 @@ const BlogBtn = styled(NavLink)`
     border: 2px solid;
     background-color: transparent;
     color: ${Colors.blue_text};
-    box-shadow: 0 0 30px 1px ${Colors.blue_text};
+    box-shadow: 0 0 10px 1px ${Colors.blue_text};
   }
 `;
 
 const MainContent = styled.section`
   min-height: 300px;
   padding: 100px 30px 50px;
-  background-color: #000;
+  background-color: ${Colors.bgColor};
   color: #1b9cfc;
   font-family: "Montserrat", "Saira", "Nunito", "Arial", "Sans-Serif";
 `;
@@ -161,7 +161,7 @@ const LookWhatIsUp = styled.h1`
   margin: 0 auto 50px;
   font-size: 56px;
   font-weight: 700;
-  color: #fff;
+  color: ${Colors.white};
   border-top: 4px solid #1b9cfc;
   border-bottom: 4px solid #1b9cfc;
 `;
@@ -176,9 +176,9 @@ const GamesSection = styled.section`
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
-  border: 3px solid #0097e6;
+  border: 3px solid #0984e3;
   border-radius: 20px;
-  box-shadow: 0 0 30px 2px #74b9ff;
+  box-shadow: 0 0 15px 2px #74b9ff;
 `;
 
 const GameIMG = styled.img`
