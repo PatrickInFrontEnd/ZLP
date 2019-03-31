@@ -91,7 +91,7 @@ const Navigation = styled.nav`
   border-bottom: 2px solid #000;
   z-index: 10;
 
-  @media screen and (max-width:1450px){
+  @media screen and (max-width:1024px){
     justify-content:space-between;
   }
 `;
@@ -110,7 +110,7 @@ const NavSection = styled.div`
   width: 80%;
   height: 100%;
 
-  @media screen and (max-width:1450px){
+  @media screen and (max-width:1024px){
     visibility:hidden;
     opacity:0;
     width:0;
@@ -123,11 +123,15 @@ const NavBtnStyle = styled.div`
   margin-left: 20px;
   position: relative;
 
+  @media screen and (max-width:1440px) {
+    margin-left:10px;
+  }
+
   &::before {
     content: "";
     display: block;
     position: absolute;
-    bottom: -5px;
+    bottom: -0px;
     left: 0;
     height: 2px;
     width: 0%;
@@ -156,6 +160,16 @@ export const NavBtn = styled.div`
   border-radius: 10px;
   transition: 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) all;
 
+  @media screen and (max-width:1440px) {
+    font-size:${props => (props.isBig ? "20px" : "18px")};
+  }
+  @media screen and (max-width:1260px) {
+    font-size:${props => (props.isBig ? "18px" : "16px")};
+  }
+  @media screen and (max-width:1170px) {
+   padding:5px;
+  }
+
   &:hover {
     color: #fff;
     border-color: #1abc9c;
@@ -180,7 +194,7 @@ const HamburgerBtn = styled.div`
   transition:.5s;
   cursor: pointer;
 
-  @media screen and (min-width:1450px){
+  @media screen and (min-width:1024px){
     visibility:hidden;
     opacity:0;
     display:none;
