@@ -172,7 +172,7 @@ export const NavBtn = styled.div`
 
   &:hover {
     color: #fff;
-    border-color: #1abc9c;
+    border-color: #44bd32;
   }
 `;
 
