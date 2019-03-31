@@ -21,6 +21,6 @@ z-index: 5;
   border: 2px solid;
   background-color:transparent;
   color:${Colors.blue_text};
-  box-shadow: 0 0 30px 1px ${Colors.blue_text};
+  box-shadow: 0 0 15px 1px ${Colors.blue_text};
 }
 `;

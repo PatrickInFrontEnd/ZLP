@@ -7,8 +7,8 @@ export const P = styled.p`
   font-weight: 700;
   width:60vw;
   padding: 20px 40px;
-  border-top: 2px solid #2f383f;
-  border-bottom: 2px solid #2f383f;
+  // border-top: 2px solid #2f383f;
+  // border-bottom: 2px solid #2f383f;
   margin: 0 auto 40px;
   text-align:justify;
   text-align-last:center;
