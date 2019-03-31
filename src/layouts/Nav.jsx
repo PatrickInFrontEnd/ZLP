@@ -178,7 +178,6 @@ export const NavBtn = styled.div`
 
 const HamburgerBtn = styled.div`
   position: relative;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -193,11 +192,14 @@ const HamburgerBtn = styled.div`
   color:${Colors.blue_nav};
   transition:.5s;
   cursor: pointer;
-
-  @media screen and (min-width:1024px){
-    visibility:hidden;
+  visibility:hidden;
     opacity:0;
     display:none;
+
+  @media screen and (max-width:1024px){
+    visibility:visible;
+    opacity:1;
+    display:flex;
   }
 
   &:hover{

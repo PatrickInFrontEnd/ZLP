@@ -173,13 +173,14 @@ const P = styled.p`
     padding: 10px;
     color:${Colors.blue_text};
     font-size: 22px;
+    text-align:center;
 
     @media (max-width: 1024px) {
-        font-size: .7rem;   
+        font-size: 18px;   
     }
     
     @media (max-width: 768px) {
-        font-size: .8rem;
+        font-size: 16px;
     }
     
 `;

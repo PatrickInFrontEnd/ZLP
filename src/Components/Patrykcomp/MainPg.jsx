@@ -132,7 +132,7 @@ const BlogBtn = styled(NavLink)`
   font-weight: 700;
   letter-spacing: 2px;
   padding: 0 30px;
-  border: 2px solid ${Colors.green};
+  border: 2px solid ${Colors.light_green};
   border-radius: 10px;
   transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   overflow: hidden;
