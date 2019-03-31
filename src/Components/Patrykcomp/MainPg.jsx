@@ -58,8 +58,8 @@ class MainPg extends Component {
         <BlogSection>
           <GetToKnowOurBlog>
             Poznaj naszego bloga!
-            <BlogBtn to="/blog">Przejdź na bloga</BlogBtn>
           </GetToKnowOurBlog>
+          <BlogBtn to="/blog">Przejdź na bloga</BlogBtn>
           <Blog>Miejsce na Bloga</Blog>
         </BlogSection>
       </Wrap>
@@ -72,6 +72,7 @@ export default MainPg;
 const Wrap = styled.div`
   width: 100%;
   color: ${Colors.white};
+  padding-bottom:20px;
 `;
 
 const BlogSection = styled.section`
@@ -117,7 +118,7 @@ const Blog = styled.div`
 
   @media screen and (max-width:950px){
     width:90%;
-    min-height:calc(100vh - 80px);
+    min-height:calc(100vh - 120px);
   }
 `;
 
@@ -132,6 +133,7 @@ const BlogBtn = styled(NavLink)`
   font-weight: 700;
   letter-spacing: 2px;
   padding: 0 30px;
+  margin:40px auto 60px;
   border: 2px solid ${Colors.light_green};
   border-radius: 10px;
   transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -139,7 +141,7 @@ const BlogBtn = styled(NavLink)`
   z-index: 5;
 
   @media screen and (max-width:1200px){
-    margin:20px 0 0;
+    margin:20px auto 40px;
   }
 
   &:hover {
