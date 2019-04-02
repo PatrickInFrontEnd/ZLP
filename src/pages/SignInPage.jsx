@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "bulma";
 
 const Container = styled.div`
-  font-family: "Nunito";
+font-family: "Nunito", "Saira", "Montserrat", "Arial", "Sans-Serif";
   width: 500px;
   padding: 150px 0 0 0;
   margin: 0 auto 0;
@@ -31,14 +31,14 @@ const Form = styled.form`
   width: 100%;
 `;
 const Button = styled.button`
-  font-family: "Nunito" !important;
+font-family: "Nunito", "Saira", "Montserrat", "Arial", "Sans-Serif";
   background-color: #3273dc !important;
   &:hover {
     background-color: #1051ba !important;
   }
 `;
 const Input = styled.input`
-  font-family: "Nunito" !important;
+font-family: "Nunito", "Saira", "Montserrat", "Arial", "Sans-Serif";
 `;
 
 class SignInPage extends Component {
