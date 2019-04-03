@@ -2,7 +2,10 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Colors } from "../Components/Colors";
 
-const Container = styled.div``;
+const Container = styled.div`
+    max-width: 1300px;
+    margin: 0 auto;
+`;
 const Ledder = styled.section`
     display: flex;
     flex-grow: 1;
@@ -115,7 +118,8 @@ const Teams = styled.section`
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 50px auto 0;
-    max-width: 70%;
+    // max-width: 70%;
+    padding: 20px;
 
     @media (max-width: 768px) {
        max-width: 90%;

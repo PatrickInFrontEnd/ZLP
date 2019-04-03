@@ -29,7 +29,7 @@ class StatutePage extends Component {
                 <SHeader>Turniej rozgrywany jest na mapie Howling Abyss. Grę wygrywa ten kto jako pierwszy zabije swojego przeciwnika, wykończy setnego miniona lub zburzy przeciwną wieżę.
                 </SHeader>
                 <MYBlueHeader is100 isFZ>Dla zawodników grających w Counter Strike</MYBlueHeader>
-                <SHeader>Mecze będą rozgrywane tylko na mapach z puli turniejowej. Każda drużyna podczas gry ma możliwość wykorzystania jednej pauzy, która trwa maksymalnie 5 minut. Gramy systemem BO1, w którym każda drużyna banuje 2 mapy, z pozostałych losowana jest mapa na której będzie prowadzona rozgrywka. Finał gramy w systemie BO3, a wybór map wygląda następująco: 1 drużyna banuje mapę, 2 drużyna banuje mapę, 1 drużyna wybiera mapę, 2 drużyna wybiera mapę, 1 drużyna banuje mapę, 2 drużyna banuje mapę. Trzecią mapą na której możliwa będzie rozgrywka jest ta która nie pozostała wybrana i wyrzucona.Jeżeli uczestnik złamie regulamin, jego drużyna będzie zdyskfalifikowana.
+                <SHeader>Mecze będą rozgrywane tylko na mapach z puli turniejowej. Każda drużyna podczas gry ma możliwość wykorzystania jednej pauzy, która trwa maksymalnie 5 minut. Gramy systemem BO1, w którym każda drużyna banuje 2 mapy, z pozostałych losowana jest mapa na której będzie prowadzona rozgrywka. Finał gramy w systemie BO3,a wybór map wygląda następująco: 1 drużyna banuje mapę, 2 drużyna banuje mapę, 1 drużyna wybiera mapę, 2 drużyna wybiera mapę, 1 drużyna banuje mapę, 2 drużyna banuje mapę. Trzecią mapą na której możliwa będzie rozgrywka jest ta która nie pozostała wybrana i wyrzucona.Jeżeli uczestnik złamie regulamin, jego drużyna będzie zdyskfalifikowana.
                 </SHeader>
             </Wrapper>
         );
@@ -68,7 +68,7 @@ const StatuteHeader = styled(Header)`
             }
 `;
 
-const MyP = styled(P)`
+export const MyP = styled(P)`
     border:none;
     margin:0 0 20px;
     text-align:left;
