@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { Colors } from "../Components/Colors";
 
 const Container = styled.div`
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
+    font-family: "Nunito", "Saira", "Montserrat", "Arial", "Sans-Serif";
 `;
 const Ledder = styled.section`
     display: flex;
@@ -232,13 +233,13 @@ class LedderPage extends Component {
                     <Collection>
                         <PlaceOfTeam>
                             <Final>
-                                <PInLederSection>final</PInLederSection>
+                                <PInLederSection>Finał</PInLederSection>
                             </Final>
                         </PlaceOfTeam>
                         <Icon><I></I></Icon>
                         <PlaceOfTeam>
                             <Final>
-                                <PInLederSection>final</PInLederSection>
+                                <PInLederSection>Finał</PInLederSection>
                             </Final>
                         </PlaceOfTeam>
                     </Collection>

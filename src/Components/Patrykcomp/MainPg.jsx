@@ -158,7 +158,7 @@ const MainContent = styled.section`
   padding: 100px 30px 50px;
   background-color: ${Colors.bgColor};
   color: #1b9cfc;
-  font-family: "Montserrat", "Saira", "Nunito", "Arial", "Sans-Serif";
+  font-family: "Nunito", "Saira", "Montserrat", "Arial", "Sans-Serif";
 `;
 
 const Content = styled.section`

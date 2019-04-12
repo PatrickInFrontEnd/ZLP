@@ -8,7 +8,7 @@ export const BlueHeader = styled.h1`
   margin: 0 auto 50px;
   font-size:${(props) => props.isFZ ? '32px' : '46px'};
   font-weight: 700;
-  font-family:'Nunito','Montserrat','Arial','Sans-Serif';
+  font-family: "Nunito", "Saira", "Montserrat", "Arial", "Sans-Serif";
   color: ${Colors.white};
   border-top: 4px solid #1b9cfc;
   border-bottom: 4px solid #1b9cfc;
