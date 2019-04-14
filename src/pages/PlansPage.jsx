@@ -4,7 +4,8 @@ import { Colors } from './../Components/Colors';
 import { SHeader } from './../Components/SHeader';
 import { BlueHeader } from './../Components/BlueHeader';
 import { Wrapper } from './../Components/Wrapper';
-import { MyP } from './StatutePage'
+import { MyP } from './StatutePage';
+import { P } from './../Components/P';
 
 const Container = styled(Wrapper)`
     width:100%;
@@ -43,10 +44,10 @@ class PlansPage extends Component {
                 </MediaWrapper>
                 {/* </TODO:> */}
                 <BlueHeader isFZ>A co jeśli nie zdecydujesz się na wzięcie udziału w zabawie?</BlueHeader>
-                <MyP>Spokojnie o tym tez pomyśleliśmy.
+                <P>Spokojnie o tym tez pomyśleliśmy.
                 Podczas przerw, na korytarzu będzie możliwość zagrania w Fife lub Just Dance.
                 Chcielibyśmy aby cała szkoła wraz z nami świetnie bawiła się tego dnia. Liczymy, że znajdziesz coś dla
-                    siebie i będziesz się świetnie bawił w miłej atmosferze. Do zobaczenia!</MyP>
+                    siebie i będziesz się świetnie bawił w miłej atmosferze. Do zobaczenia!</P>
             </Container>
 
         );
