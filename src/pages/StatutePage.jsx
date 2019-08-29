@@ -10,9 +10,15 @@ import { Wrapper } from "./../Components/Wrapper";
 class StatutePage extends Component {
     state = {};
 
+    wrapper = null;
+
+    componentDidMount() {
+        console.log(this.wrapper.children);
+    }
+
     render() {
         return (
-            <Wrapper ref={el => (this.elements = el)}>
+            <Wrapper ref={el => (this.wrapper = el)}>
                 <MYBlueHeader>Teraz trochę formalności...</MYBlueHeader>
                 <SHeader>
                     Jeśli zdecydowałeś się na udział w turnieju, musisz poznać
