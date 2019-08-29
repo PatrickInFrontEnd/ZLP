@@ -54,7 +54,7 @@ class App extends Component {
 
 export default App;
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle` 
     *{
       padding:0;
       margin:0;

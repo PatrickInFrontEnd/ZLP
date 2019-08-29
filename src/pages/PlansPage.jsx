@@ -4,7 +4,6 @@ import { Colors } from './../Components/Colors';
 import { SHeader } from './../Components/SHeader';
 import { BlueHeader } from './../Components/BlueHeader';
 import { Wrapper } from './../Components/Wrapper';
-import { MyP } from './StatutePage';
 import { P } from './../Components/P';
 
 const Container = styled(Wrapper)`
