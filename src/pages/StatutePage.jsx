@@ -6,6 +6,7 @@ import { P } from "./../Components/P";
 import { Colors } from "./../Components/Colors";
 import { SHeader } from "./../Components/SHeader";
 import { Wrapper } from "./../Components/Wrapper";
+import { TimelineMax } from "gsap";
 
 class StatutePage extends Component {
     state = {};
@@ -13,7 +14,23 @@ class StatutePage extends Component {
     wrapper = null;
 
     componentDidMount() {
-        console.log(this.wrapper.children);
+        const tl = new TimelineMax();
+        tl.fromTo(
+            this.wrapper,
+            1,
+            { opacity: 0, transform: "translateX(200px)" },
+            { opacity: 1, transform: "translateX(0px)" }
+        );
+
+        /* for (let child of wrapperChildren) {
+            const tl = new TimelineMax();
+            tl.fromTo(
+                child,
+                1,
+                { opacity: 0, transform: "translateX(150px)" },
+                { opacity: 1, transform: "translateX(0px)" }
+            );
+        } */
     }
 
     render() {
