@@ -1,10 +1,15 @@
-import React from 'react';
-import MainPg from '../Components/Patrykcomp/MainPg';
+import React from "react";
+import MainPg from "../Components/MainPg";
+import Banner from "./../Components/BannerSection";
+
 class MainPage extends React.Component {
-    state = {}
+    state = {};
     render() {
         return (
-            <MainPg />
+            <>
+                <Banner />
+                <MainPg />
+            </>
         );
     }
 }

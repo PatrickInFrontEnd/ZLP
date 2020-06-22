@@ -1,55 +1,43 @@
-import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import React, { Component, Suspense, lazy } from "react";
 import Nav from "./Nav.jsx";
-import MainPage from "../pages/MainPage";
-import BlogPage from "../pages/BlogPage";
-import StatutePage from "../pages/StatutePage";
-import PlansPage from "../pages/PlansPage";
-import LedderPage from "../pages/LadderPage";
-import LogInPage from "../pages/LogInPage";
-import SignInPage from "../pages/SignInPage";
-import NotFound from "../pages/NotFound";
 import styled, { createGlobalStyle } from "styled-components";
-import BannerSection from "../Components/Patrykcomp/BannerSection";
-import jump from "jump.js-cancelable";
+import { Route, Switch } from "react-router-dom";
 import { Colors } from "../Components/Colors";
 
+const MainPage = lazy(() => import("../pages/MainPage"));
+const StatutePage = lazy(() => import("../pages/StatutePage"));
+const PlansPage = lazy(() => import("../pages/PlansPage"));
+const LadderPage = lazy(() => import("../pages/LadderPage"));
+const LoginPage = lazy(() => import("../pages/LogInPage"));
+const SignPage = lazy(() => import("../pages/SignInPage"));
+const NotFoundPage = lazy(() => import("../pages/NotFound"));
+
 const Main = styled.main`
-  width:100%;
+    width: 100%;
 `;
 
 class App extends Component {
-  handleJump = () => {
-    jump(".target", {
-      duration: 500
-    });
-  };
-  render() {
-    return (
-      <>
-        <GlobalStyle />
-        <Nav />
-        <Route
-          path="/"
-          exact
-          component={BannerSection}
-          handleJump={this.handleJump}
-        />
-        <Main>
-          <Switch>
-            <Route path="/" exact component={MainPage} />
-            <Route path="/regulamin" component={StatutePage} />
-            <Route path="/blog" component={BlogPage} />
-            <Route path="/plany" component={PlansPage} />
-            <Route path="/drabinka" component={LedderPage} />
-            <Route path="/logowanie" component={LogInPage} />
-            <Route path="/rejestracja" component={SignInPage} />
-            <Route component={NotFound} />
-          </Switch>
-        </Main>
-      </>
-    );
-  }
+    render() {
+        return (
+            <>
+                <GlobalStyle />
+                <Nav />
+                <Main>
+                    <Suspense fallback={<h1>Loading...</h1>}>
+                        <Switch>
+                            <Route path="/" exact component={MainPage} />
+                            <Route path="/regulamin" component={StatutePage} />
+                            <Route path="/plany" component={PlansPage} />
+                            <Route path="/drabinka" component={LadderPage} />
+                            <Route path="/logowanie" component={LoginPage} />
+                            <Route path="/rejestracja" component={SignPage} />
+                            <Route component={NotFoundPage} />
+                        </Switch>
+                    </Suspense>
+                </Main>
+            </>
+        );
+    }
 }
 
 export default App;
@@ -69,6 +57,4 @@ const GlobalStyle = createGlobalStyle`
     a,span,button{
       transition-duration:.3s;
     }
-
-    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Nunito:400,700|Saira:400,700&subset=latin-ext');
 `;
