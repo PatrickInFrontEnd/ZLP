@@ -1,4 +1,4 @@
-import React, { Component, createRef } from "react";
+import React, { Component, createRef, memo } from "react";
 import "bulma";
 import styled from "styled-components";
 import { callbackAnimation } from "../Components/useAnimation.hook";
@@ -121,4 +121,4 @@ class LogInPage extends Component {
     }
 }
 
-export default LogInPage;
+export default memo(LogInPage);

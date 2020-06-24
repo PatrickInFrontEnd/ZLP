@@ -1,4 +1,4 @@
-import React, { Component, createRef } from "react";
+import React, { PureComponent, createRef } from "react";
 import styled from "styled-components";
 import "bulma";
 import { callbackAnimation } from "../Components/useAnimation.hook";
@@ -42,7 +42,7 @@ const Input = styled.input`
     font-family: "Nunito", "Saira", "Montserrat", "Arial", "Sans-Serif";
 `;
 
-class SignInPage extends Component {
+class SignInPage extends PureComponent {
     state = {
         email: "",
         password: "",
@@ -164,8 +164,4 @@ class SignInPage extends Component {
     }
 }
 
-const SignPage = React.forwardRef((props, ref) => (
-    <SignInPage {...props} innerRef={ref} />
-));
-
-export default SignPage;
+export default SignInPage;

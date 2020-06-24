@@ -1,66 +1,77 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Colors } from "../Components/Colors";
+import { navigationContext } from "./../contexts/navigation_context/navigation.provider";
 
-class Nav extends Component {
-    state = {
-        isHamburgerClicked: false,
-    };
-    handleClick = () => {
-        this.setState((prev) => ({
-            isHamburgerClicked: !prev.isHamburgerClicked,
-        }));
-    };
-    render() {
-        return (
-            <Navigation>
+const Nav = (props) => {
+    const { isNavOpened, toggleClick } = useContext(navigationContext);
+    const toggleNavBtnClick = () => isNavOpened && toggleClick();
+
+    return (
+        <Navigation>
+            <NavLink to="/">
+                <IMG src="Images/logo.png" alt="ZLP" />
+            </NavLink>
+            <NavSection navOpened={isNavOpened}>
                 <NavLink to="/">
-                    <IMG src="Images/logo.png" alt="ZLP" />
+                    <NavBtn noBoxShadow onClick={toggleNavBtnClick}>
+                        Strona Główna
+                    </NavBtn>
                 </NavLink>
-                <NavSection>
-                    <NavLink to="/">
-                        <NavBtn>Strona Główna</NavBtn>
-                    </NavLink>
-                    <NavLink to="/drabinka">
-                        <NavBtn>Drabinka</NavBtn>
-                    </NavLink>
-                    <NavLink to="/regulamin">
-                        <NavBtn>Regulamin</NavBtn>
-                    </NavLink>
-                    <NavLink to="/plany">
-                        <NavBtn>Co w planach</NavBtn>
-                    </NavLink>
-                    <NavLink to="/rejestracja">
-                        <NavBtn isBig isWhite isBorder noBefore>
-                            Zarejestruj się
-                        </NavBtn>
-                    </NavLink>
+                <NavLink to="/drabinka">
+                    <NavBtn noBoxShadow onClick={toggleNavBtnClick}>
+                        Drabinka
+                    </NavBtn>
+                </NavLink>
+                <NavLink to="/regulamin">
+                    <NavBtn noBoxShadow onClick={toggleNavBtnClick}>
+                        Regulamin
+                    </NavBtn>
+                </NavLink>
+                <NavLink to="/plany">
+                    <NavBtn noBoxShadow onClick={toggleNavBtnClick}>
+                        Co w planach
+                    </NavBtn>
+                </NavLink>
+                <NavLink to="/rejestracja">
+                    <NavBtn
+                        isBig
+                        isWhite
+                        isBorder
+                        noBefore
+                        onClick={toggleNavBtnClick}
+                    >
+                        Zarejestruj się
+                    </NavBtn>
+                </NavLink>
 
-                    <NavLink to="/logowanie">
-                        <NavBtn isBig isWhite isBorder noBefore>
-                            Zaloguj się
-                        </NavBtn>
-                    </NavLink>
-                </NavSection>
-                <HamburgerBtn
-                    onClick={this.handleClick}
-                    isClicked={this.state.isHamburgerClicked}
-                >
-                    <Span isClicked={this.state.isHamburgerClicked} />
-                    <Span isClicked={this.state.isHamburgerClicked} />
-                    <Span isClicked={this.state.isHamburgerClicked} />
-                    <Span isClicked={this.state.isHamburgerClicked} />
-                    <Span isClicked={this.state.isHamburgerClicked} />
-                </HamburgerBtn>
-            </Navigation>
-        );
-    }
-}
+                <NavLink to="/logowanie">
+                    <NavBtn
+                        isBig
+                        isWhite
+                        isBorder
+                        noBefore
+                        onClick={toggleNavBtnClick}
+                    >
+                        Zaloguj się
+                    </NavBtn>
+                </NavLink>
+            </NavSection>
+            <HamburgerBtn onClick={toggleClick} isClicked={isNavOpened}>
+                <Span isClicked={isNavOpened} />
+                <Span isClicked={isNavOpened} />
+                <Span isClicked={isNavOpened} />
+                <Span isClicked={isNavOpened} />
+                <Span isClicked={isNavOpened} />
+            </HamburgerBtn>
+        </Navigation>
+    );
+};
 
 export default Nav;
 
-/* note: Styled-Components section */
+/* NOTE: Styled-Components section */
 
 const Navigation = styled.nav`
     position: sticky;
@@ -89,30 +100,16 @@ const IMG = styled.img`
     margin-top: 5px;
 `;
 
-const NavSection = styled.div`
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 80%;
-    height: 100%;
-
-    @media screen and (max-width: 1024px) {
-        visibility: hidden;
-        opacity: 0;
-        width: 0;
-    }
-`;
-
 export const NavBtn = styled.span`
     position: relative;
     padding: 10px 15px;
     font-family: "Nunito", "Montserrat", "Arial", "Sans-Serif";
     font-size: ${({ isBig }) => (isBig ? "22px" : "18px")};
     font-weight: 700;
-    color: ${Colors.blue_nav};
+    color: ${({ isWhite }) => (isWhite ? "#fff" : Colors.blue_nav)};
     border: ${({ isBorder }) => (isBorder ? "2px solid" : "none")};
     border-radius: 10px;
-    transition: 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) all;
+    transition: 0.2s ease-in-out all;
     display: flex;
     text-align: center;
     margin-left: 20px;
@@ -135,8 +132,12 @@ export const NavBtn = styled.span`
            }`}
 
     &:hover {
-        color: #fff;
-        border-color: ${Colors.light_green};
+        ${({ noBoxShadow, isWhite }) =>
+            noBoxShadow
+                ? ""
+                : `box-shadow: 0 0 5px 1px ${
+                      isWhite ? "#fff" : Colors.blue_nav$
+                  }`}
     }
 
     &:hover::before {
@@ -152,6 +153,46 @@ export const NavBtn = styled.span`
     }
     @media screen and (max-width: 1170px) {
         padding: 5px;
+    }
+`;
+
+export const NavSection = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    transition: 0.6s;
+
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        justify-content: flex-start;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        height: 500px;
+        opacity: 0;
+        visibility: hidden;
+        background-color: ${Colors.onMediaResizeNavigationColor};
+
+        ${({ navOpened }) =>
+            navOpened
+                ? `
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        `
+                : `
+        transform: translateX(110%);
+        opacity: 0;
+        visibility: hidden;
+        `}
+
+        ${NavBtn} {
+            margin-top: 30px;
+            padding: 10px 15px;
+        }
     }
 `;
 

@@ -51,8 +51,16 @@ const MainPg = (props) => {
                             do wielkiego finału
                         </P>
 
-                        <NavLink to="/rejestracja">
-                            <GoToRegistration isBig isWhite isBorder noBefore>
+                        <NavLink
+                            to="/rejestracja"
+                            style={{ margin: "0 auto", display: "block" }}
+                        >
+                            <GoToRegistration
+                                isBig
+                                isWhite
+                                isBorder
+                                noBoxShadow
+                            >
                                 Zarejestruj się by wziąć udział w turnieju
                                 legend!
                             </GoToRegistration>
@@ -135,31 +143,52 @@ const TournamentDescription = styled.article`
     word-wrap: break-word;
 
     @media screen and (max-width: 750px) {
-        width: 80%;
+        width: 100%;
         padding: 0;
-        margin: 50px auto;
+        margin: 20px auto;
     }
 `;
 
 const GoToRegistration = styled(NavBtn)`
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    overflow: hidden;
 
-    @media screen and (max-width: 1600px) {
-        width: 70%;
+    &::before,
+    &::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        transition: 0.5s;
     }
+
+    &::before {
+        transform: translateX(-102%);
+        top: 0;
+    }
+    &::after {
+        transform: translateX(102%);
+        bottom: 0;
+    }
+
+    &:hover::before,
+    &:hover::after {
+        transform: translateX(0);
+    }
+
     @media screen and (max-width: 1175px) {
         font-size: 20px;
     }
 
-    @media screen and (max-width: 1090px) {
-        width: 80%;
-    }
     @media screen and (max-width: 990px) {
-        width: 100%;
         text-align: center;
     }
 `;

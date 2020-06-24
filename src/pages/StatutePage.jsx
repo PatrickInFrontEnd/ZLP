@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, memo } from "react";
 import styled from "styled-components";
 import useAnimation from "../Components/useAnimation.hook";
 import { BlueHeader } from "./../Components/BlueHeader";
@@ -76,7 +76,7 @@ const StatutePage = (props) => {
     );
 };
 
-export default StatutePage;
+export default memo(StatutePage);
 
 const MYBlueHeader = styled(BlueHeader)`
     width: ${(props) => (props.is100 ? "100%" : "80%")};

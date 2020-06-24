@@ -3,6 +3,7 @@ import Nav from "./Nav.jsx";
 import styled, { createGlobalStyle } from "styled-components";
 import { Route, Switch } from "react-router-dom";
 import { Colors } from "../Components/Colors";
+import NavigationProvider from "./../contexts/navigation_context/navigation.provider";
 
 const MainPage = lazy(() => import("../pages/MainPage"));
 const StatutePage = lazy(() => import("../pages/StatutePage"));
@@ -21,7 +22,9 @@ class App extends Component {
         return (
             <>
                 <GlobalStyle />
-                <Nav />
+                <NavigationProvider>
+                    <Nav />
+                </NavigationProvider>
                 <Main>
                     <Suspense fallback={<h1>Loading...</h1>}>
                         <Switch>
@@ -52,6 +55,7 @@ const GlobalStyle = createGlobalStyle`
     body{
       background-color:${Colors.bgColor};
       font-family:'Montserrat','Nunito','Arial','Sans-Serif';
+      overflow-x:hidden;
     }
 
     a,span,button{

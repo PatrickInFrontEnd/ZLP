@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, memo } from "react";
 import styled from "styled-components";
 import useAnimation from "../Components/useAnimation.hook";
 import { Colors } from "../Components/Colors";
@@ -347,4 +347,4 @@ const LadderPage = (props) => {
     );
 };
 
-export default LadderPage;
+export default memo(LadderPage);

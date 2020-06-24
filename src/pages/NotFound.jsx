@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, memo } from "react";
 import useAnimation from "../Components/useAnimation.hook";
 import styled from "styled-components";
 import { Header } from "./../Components/Header";
@@ -25,7 +25,7 @@ const NotFound = (props) => {
     );
 };
 
-export default NotFound;
+export default memo(NotFound);
 
 const Wrap = styled.div`
     display: flex;

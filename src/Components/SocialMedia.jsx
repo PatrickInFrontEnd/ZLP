@@ -9,21 +9,27 @@ class SocialMedia extends Component {
     render() {
         return (
             <SMediaSection>
-                <SMedia
+                <MediaLink
                     href="https://www.facebook.com/ckziuzbaszynek/"
                     bgcHov="#3b5998"
+                    target="_blank"
                 >
                     <I className="fab fa-facebook-f" />
-                </SMedia>
-                <SMedia
+                </MediaLink>
+                <MediaLink
                     href="https://www.youtube.com/channel/UCB8Ky1jlPbiZe5Fm_EUCxCg"
                     bgcHov="#cc181e"
+                    target="_blank"
                 >
                     <I className="fab fa-youtube" />
-                </SMedia>
-                <SMedia href="https://www.twitch.tv/zlpstream" bgcHov="#6441A5">
+                </MediaLink>
+                <MediaLink
+                    href="https://www.twitch.tv/zlpstream"
+                    bgcHov="#6441A5"
+                    target="_blank"
+                >
                     <I className="fab fa-twitch" />
-                </SMedia>
+                </MediaLink>
             </SMediaSection>
         );
     }
@@ -77,7 +83,7 @@ const SMediaSection = styled.section`
     }
 `;
 
-const SMedia = styled.a`
+const MediaLink = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;

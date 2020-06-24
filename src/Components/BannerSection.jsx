@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
 import gsap from "gsap";
 import { Colors } from "./Colors";
@@ -19,7 +19,7 @@ const BannerSection = (props) => {
     );
 };
 
-export default BannerSection;
+export default memo(BannerSection);
 
 const BannerWrapper = styled.div`
     font-family: "Nunito";
