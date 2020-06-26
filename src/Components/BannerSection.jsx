@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import styled from "styled-components";
 import gsap from "gsap";
 import { Colors } from "./Colors";
+import banerJPG from "./../Img/baner.jpg";
 
 const BannerSection = (props) => {
     const handleBannerClick = () => {
@@ -27,7 +28,7 @@ const BannerWrapper = styled.div`
     width: 100%;
     min-height: calc(100vh - 80px);
     max-height: 1080px;
-    background-image: url("../../../Images/baner.png");
+    background-image: url(${banerJPG});
     background-size: cover;
     background-position: center center;
     color: ${Colors.white};

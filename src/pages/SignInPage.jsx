@@ -1,64 +1,110 @@
 import React, { PureComponent, createRef } from "react";
 import styled from "styled-components";
-import "bulma";
 import { callbackAnimation } from "../Components/useAnimation.hook";
+import { Colors } from "../Components/Colors";
 
-const Container = styled.div`
+export const Container = styled.div`
     font-family: "Nunito", "Saira", "Montserrat", "Arial", "Sans-Serif";
     width: 500px;
-    padding: 150px 0 0 0;
+    padding: 0;
     margin: 0 auto 0;
     color: white;
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 300px);
     @media only screen and (max-width: 550px) {
         width: 90%;
         padding: 30px 0 0 0;
     }
 `;
-const Wrapper = styled.div`
-    margin: 30px 5px;
+export const Wrapper = styled.div`
+    position: relative;
+    margin: 20px 5px;
 `;
-const H2 = styled.h2`
-    color: white !important;
+
+export const I = styled.i`
+    color: ${Colors.blue_text};
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-40px, -50%);
+    font-size: 24px;
+    transition: 0.3s;
+`;
+export const H2 = styled.h2`
+    color: ${Colors.white};
     padding: 15px 0 0 0;
-    font-size: 3rem !important;
+    margin-bottom: 50px;
+    font-size: 3rem;
     text-align: center;
     @media only screen and (max-width: 550px) {
-        font-size: 2rem !important;
+        font-size: 2rem;
     }
 `;
-const Form = styled.form`
+export const Form = styled.form`
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 `;
-const Button = styled.button`
+export const Button = styled.button`
+    width: 300px;
+    height: 50px;
+    margin-top: 20px;
     font-family: "Nunito", "Saira", "Montserrat", "Arial", "Sans-Serif";
-    background-color: #3273dc !important;
-    &:hover {
-        background-color: #1051ba !important;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: ${Colors.light_green};
+    color: ${Colors.white};
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+        background-color: ${Colors.blue_text};
+        box-shadow: 0 0 5px 2px ${Colors.blue_nav};
     }
 `;
-const Input = styled.input`
+export const Input = styled.input`
     font-family: "Nunito", "Saira", "Montserrat", "Arial", "Sans-Serif";
+    width: 300px;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid ${Colors.blue_nav};
+    transition: 0.3s;
+    color: ${Colors.white};
+
+    &:focus {
+        border-bottom: 2px solid ${Colors.white};
+
+        &::placeholder {
+            color: ${Colors.white};
+        }
+
+        ~ ${I} {
+            color: ${Colors.white};
+        }
+    }
 `;
 
 class SignInPage extends PureComponent {
     state = {
         email: "",
         password: "",
-        reapettedPassword: "",
+        repeatPassword: "",
         userName: "",
     };
 
     handleChange = (e) => {
-        if (e.target.dataset.name === "password")
-            this.setState({ password: e.target.value });
-        if (e.target.dataset.name === "email")
-            this.setState({ email: e.target.value });
-        if (e.target.dataset.name === "reapettedPassword")
-            this.setState({ reapettedPassword: e.target.value });
-        if (e.target.dataset.name === "userName")
-            this.setState({ userName: e.target.value });
+        const { name, value } = e.target;
+        this.setState({ [name]: value });
     };
 
     handleSubmit = (e) => {
@@ -72,11 +118,11 @@ class SignInPage extends PureComponent {
             this.setState({
                 email: "",
                 password: "",
-                reapettedPassword: "",
+                repeatPassword: "",
                 userName: "",
             });
             console.log("formularz wysłany");
-        } else console.log("pola musza byc wypoenione");
+        } else console.log("pola muszą być wypełnione");
     };
 
     ref = createRef(null);
@@ -89,74 +135,57 @@ class SignInPage extends PureComponent {
         return (
             <Container ref={this.ref}>
                 <Form action="" onSubmit={this.handleSubmit}>
-                    <H2 className="label is-large">Zarejestruj się</H2>
-                    <Wrapper className="control is-medium has-icons-left">
+                    <H2>Zarejestruj się</H2>
+                    <Wrapper>
                         <Input
                             type="email"
-                            className="input is-medium"
                             id="name"
-                            name="name"
+                            name="email"
                             onChange={this.handleChange}
                             value={this.state.email}
-                            data-name="email"
                             placeholder="Email"
                         />
-                        <span className="is-medium icon is-left">
-                            <i className="fas fa-envelope fa-xs" />
-                        </span>
+
+                        <I className="fas fa-envelope fa-xs" />
                     </Wrapper>
-                    <Wrapper className="control is-medium has-icons-left">
+                    <Wrapper>
                         <Input
                             type="text"
-                            className="input is-medium"
-                            name="password"
+                            name="userName"
                             id="userName"
                             onChange={this.handleChange}
                             value={this.state.userName}
-                            data-name="userName"
                             placeholder="Nazwa użytkownika"
                         />
-                        <span className="is-medium icon is-left">
-                            <i className="fas  fa-user" />
-                        </span>
+
+                        <I className="fas  fa-user" />
                     </Wrapper>
-                    <Wrapper className="control is-medium has-icons-left">
+                    <Wrapper>
                         <Input
                             type="password"
-                            className="input is-medium"
                             name="password"
                             id="password"
                             onChange={this.handleChange}
                             value={this.state.password}
-                            data-name="password"
                             placeholder="Hasło"
                         />
-                        <span className="is-medium icon is-left">
-                            <i className="fas fa-lock" />
-                        </span>
-                    </Wrapper>
-                    <Wrapper className="control is-medium has-icons-left">
-                        <Input
-                            type="password"
-                            className="input is-medium"
-                            name="reapettedPassword"
-                            id="reapettedPassword"
-                            onChange={this.handleChange}
-                            value={this.state.reapettedPassword}
-                            data-name="reapettedPassword"
-                            placeholder="Powtórz hasło"
-                        />
-                        <span className="is-medium icon is-left">
-                            <i className="fas fa-lock" />
-                        </span>
+
+                        <I className="fas fa-lock" />
                     </Wrapper>
                     <Wrapper>
-                        <Button
-                            type="submit"
-                            className="button is-info is-medium"
-                        >
-                            Zarejestruj się
-                        </Button>
+                        <Input
+                            type="password"
+                            name="repeatPassword"
+                            id="repeatPassword"
+                            onChange={this.handleChange}
+                            value={this.state.repeatPassword}
+                            placeholder="Powtórz hasło"
+                        />
+
+                        <I className="fas fa-lock" />
+                    </Wrapper>
+                    <Wrapper>
+                        <Button type="submit">Zarejestruj się</Button>
                     </Wrapper>
                 </Form>
             </Container>

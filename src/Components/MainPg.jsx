@@ -1,5 +1,3 @@
-/* Example file to style &  build structure*/
-
 import React, { memo } from "react";
 import styled from "styled-components";
 import SocialMedia from "./SocialMedia";
@@ -8,6 +6,9 @@ import { Colors } from "./Colors";
 import { BlueHeader } from "./BlueHeader";
 import { P } from "./P";
 import { NavLink } from "react-router-dom";
+import lolPNG from "./../Img/LoL.png";
+import CSPNG from "./../Img/CS.png";
+import fifaPNG from "./../Img/fifa.png";
 
 const MainPg = (props) => {
     return (
@@ -18,9 +19,9 @@ const MainPg = (props) => {
                         Zerknij śmiało i dołącz do turnieju!
                     </BlueHeader>
                     <GamesSection>
-                        <GameIMG src="Images/LoL.png" alt="League of Legends" />
-                        <GameIMG src="Images/CS.png" alt="Counter Strike" />
-                        <GameIMG src="Images/fifa.png" alt="Fifa" />
+                        <GameIMG src={lolPNG} alt="League of Legends" />
+                        <GameIMG src={CSPNG} alt="Counter Strike" />
+                        <GameIMG src={fifaPNG} alt="Fifa" />
                     </GamesSection>
                     <TournamentDescription>
                         <P>

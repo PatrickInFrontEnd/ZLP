@@ -1,17 +1,49 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Colors } from "../Components/Colors";
 import { navigationContext } from "./../contexts/navigation_context/navigation.provider";
+import debounce from "./../utils/debounce";
+import gsap from "gsap";
+import logoPNG from "./../Img/logo_optimized.png";
 
 const Nav = (props) => {
     const { isNavOpened, toggleClick } = useContext(navigationContext);
     const toggleNavBtnClick = () => isNavOpened && toggleClick();
+    let lastPosY = 0;
+
+    const navRef = useRef(null);
+
+    const handleScrollY = (e) => {
+        const wY = window.scrollY;
+        const step = lastPosY - wY;
+
+        animateNavigationBar(step);
+        lastPosY = wY;
+    };
+
+    const animateNavigationBar = (step) => {
+        const tl = gsap.timeline();
+        const target = navRef.current;
+
+        if (step < 0 && window.scrollY >= target.offsetHeight) {
+            tl.to(target, {
+                transform: "translateY(-110%)",
+                duration: 0.5,
+            });
+        } else {
+            tl.to(target, { transform: "translateY(0)", duration: 0.5 });
+        }
+    };
+
+    useEffect(() =>
+        window.addEventListener("scroll", debounce(handleScrollY, 100), [])
+    );
 
     return (
-        <Navigation>
+        <Navigation ref={navRef}>
             <NavLink to="/">
-                <IMG src="Images/logo.png" alt="ZLP" />
+                <IMG src={logoPNG} alt="ZLP" />
             </NavLink>
             <NavSection navOpened={isNavOpened}>
                 <NavLink to="/">
@@ -74,10 +106,10 @@ export default Nav;
 /* NOTE: Styled-Components section */
 
 const Navigation = styled.nav`
-    position: sticky;
+    position: sticky !important;
+    top: 0;
     left: 0;
     right: 0;
-    top: 0;
     display: flex;
     justify-items: center;
     justify-content: space-around;

@@ -6,4 +6,6 @@ export const Colors = {
     green: "#44bd32",
     bgColor: "#0e161d",
     onMediaResizeNavigationColor: "#071e3d",
+    footer: "#13334C",
+    footer_text: "#f2f2f2",
 };

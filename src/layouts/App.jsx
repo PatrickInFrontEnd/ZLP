@@ -4,6 +4,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import { Route, Switch } from "react-router-dom";
 import { Colors } from "../Components/Colors";
 import NavigationProvider from "./../contexts/navigation_context/navigation.provider";
+import Footer from "./../Components/footer";
 
 const MainPage = lazy(() => import("../pages/MainPage"));
 const StatutePage = lazy(() => import("../pages/StatutePage"));
@@ -38,6 +39,7 @@ class App extends Component {
                         </Switch>
                     </Suspense>
                 </Main>
+                <Footer />
             </>
         );
     }

@@ -1,46 +1,6 @@
 import React, { Component, createRef, memo } from "react";
-import "bulma";
-import styled from "styled-components";
 import { callbackAnimation } from "../Components/useAnimation.hook";
-
-const Container = styled.div`
-    font-family: "Nunito";
-    width: 500px;
-    padding: 150px 0 0 0;
-    margin: 0 auto 0;
-    color: white;
-    display: flex;
-    justify-content: center;
-    @media only screen and (max-width: 550px) {
-        width: 90%;
-        padding: 30px 0 0 0;
-    }
-`;
-const Wrapper = styled.div`
-    margin: 30px 5px;
-`;
-const H2 = styled.h2`
-    color: white !important;
-    padding: 15px 0 0 0;
-    font-size: 3rem !important;
-    text-align: center;
-    @media only screen and (max-width: 550px) {
-        font-size: 2rem !important;
-    }
-`;
-const Form = styled.form`
-    width: 100%;
-`;
-const Button = styled.button`
-    font-family: "Nunito" !important;
-    background-color: #3273dc !important;
-    &:hover {
-        background-color: #1051ba !important;
-    }
-`;
-const Input = styled.input`
-    font-family: "Nunito" !important;
-`;
+import { Wrapper, Button, Container, Form, H2, I, Input } from "./SignInPage";
 
 class LogInPage extends Component {
     state = {
@@ -49,10 +9,8 @@ class LogInPage extends Component {
     };
 
     handleChange = (e) => {
-        if (e.target.dataset.name === "password")
-            this.setState({ password: e.target.value });
-        if (e.target.dataset.name === "name")
-            this.setState({ name: e.target.value });
+        const { name, value } = e.target;
+        this.setState({ [name]: value });
     };
 
     handleSubmit = (e) => {
@@ -76,36 +34,30 @@ class LogInPage extends Component {
         return (
             <Container ref={this.wrapper}>
                 <Form action="" onSubmit={this.handleSubmit}>
-                    <H2 className="label is-large">Zaloguj się</H2>
-                    <Wrapper className="control is-medium has-icons-left">
+                    <H2>Zaloguj się</H2>
+                    <Wrapper>
                         <Input
                             type="email"
-                            className="input is-medium"
                             id="name"
                             name="name"
                             onChange={this.handleChange}
                             value={this.state.name}
-                            data-name="name"
                             placeholder="Email"
                         />
-                        <span className="is-medium icon is-left">
-                            <i className="fas fa-envelope fa-xs" />
-                        </span>
+
+                        <I className="fas fa-envelope fa-xs" />
                     </Wrapper>
                     <Wrapper className="control is-medium has-icons-left">
                         <Input
                             type="password"
-                            className="input is-medium"
                             name="password"
                             id="password"
                             onChange={this.handleChange}
                             value={this.state.password}
-                            data-name="password"
                             placeholder="Hasło"
                         />
-                        <span className="is-medium icon is-left">
-                            <i className="fas fa-lock" />
-                        </span>
+
+                        <I className="fas fa-lock" />
                     </Wrapper>
                     <Wrapper>
                         <Button
