@@ -5,9 +5,10 @@ import { Colors } from "../Components/Colors";
 import { navigationContext } from "./../contexts/navigation_context/navigation.provider";
 import gsap from "gsap";
 import logoPNG from "./../Img/logo_optimized.png";
+import debounce from "./../utils/debounce";
 
 const Nav = (props) => {
-    const { isNavOpened, toggleClick, navVisible } = useContext(
+    const { isNavOpened, toggleClick, currentY, navVisible } = useContext(
         navigationContext
     );
 
@@ -30,13 +31,14 @@ const Nav = (props) => {
     };
 
     useEffect(() => {
+        console.log("IM FIRED");
         if (isNavOpened) return;
         if (navVisible) {
             animateNav("in");
         } else {
-            animateNav("out");
+            if (currentY >= 80) animateNav("out");
         }
-    }, [isNavOpened, navVisible]);
+    }, [isNavOpened, navVisible, currentY]);
 
     return (
         <Navigation ref={navRef}>
