@@ -57,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
     body{
       background-color:${Colors.bgColor};
       font-family:'Montserrat','Nunito','Arial','Sans-Serif';
-      overflow-x:hidden;
+      padding-top:80px;
     }
 
     a,span,button{

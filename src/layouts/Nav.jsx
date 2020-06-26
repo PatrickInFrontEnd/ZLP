@@ -3,30 +3,23 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Colors } from "../Components/Colors";
 import { navigationContext } from "./../contexts/navigation_context/navigation.provider";
-import debounce from "./../utils/debounce";
 import gsap from "gsap";
 import logoPNG from "./../Img/logo_optimized.png";
 
 const Nav = (props) => {
-    const { isNavOpened, toggleClick } = useContext(navigationContext);
+    const { isNavOpened, toggleClick, navVisible } = useContext(
+        navigationContext
+    );
+
     const toggleNavBtnClick = () => isNavOpened && toggleClick();
-    let lastPosY = 0;
 
     const navRef = useRef(null);
 
-    const handleScrollY = (e) => {
-        const wY = window.scrollY;
-        const step = lastPosY - wY;
-
-        animateNavigationBar(step);
-        lastPosY = wY;
-    };
-
-    const animateNavigationBar = (step) => {
+    const animateNav = (type = "in") => {
         const tl = gsap.timeline();
         const target = navRef.current;
 
-        if (step < 0 && window.scrollY >= target.offsetHeight) {
+        if (type === "out") {
             tl.to(target, {
                 transform: "translateY(-110%)",
                 duration: 0.5,
@@ -36,9 +29,14 @@ const Nav = (props) => {
         }
     };
 
-    useEffect(() =>
-        window.addEventListener("scroll", debounce(handleScrollY, 100), [])
-    );
+    useEffect(() => {
+        if (isNavOpened) return;
+        if (navVisible) {
+            animateNav("in");
+        } else {
+            animateNav("out");
+        }
+    }, [isNavOpened, navVisible]);
 
     return (
         <Navigation ref={navRef}>
@@ -106,7 +104,7 @@ export default Nav;
 /* NOTE: Styled-Components section */
 
 const Navigation = styled.nav`
-    position: sticky !important;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -225,6 +223,12 @@ export const NavSection = styled.div`
             margin-top: 30px;
             padding: 10px 15px;
         }
+    }
+
+    @media screen and (max-height: 500px) {
+        height: calc(100vh - 80px);
+        overflow-y: auto;
+        padding: 10px 0;
     }
 `;
 
