@@ -69,6 +69,10 @@ export const Button = styled.button`
         background-color: ${Colors.blue_text};
         box-shadow: 0 0 5px 2px ${Colors.blue_nav};
     }
+
+    @media screen and (max-width: 440px) {
+        width: 250px;
+    }
 `;
 export const Input = styled.input`
     font-family: "Nunito", "Saira", "Montserrat", "Arial", "Sans-Serif";
@@ -91,6 +95,16 @@ export const Input = styled.input`
         ~ ${I} {
             color: ${Colors.white};
         }
+    }
+
+    @media screen and (max-width: 440px) {
+        width: 220px;
+    }
+
+    @media screen and (max-width: 360px) {
+        position: relative;
+        left: 10px;
+        width: 200px;
     }
 `;
 

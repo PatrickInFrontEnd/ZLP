@@ -30,7 +30,6 @@ const Nav = (props) => {
     };
 
     useEffect(() => {
-        console.log("IM FIRED");
         if (isNavOpened) return;
         if (navVisible) {
             animateNav("in");
