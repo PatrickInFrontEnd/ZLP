@@ -92,6 +92,14 @@ const Description = styled.h2`
     @media screen and (max-width: 800px) {
         text-align: justify;
     }
+
+    @media screen and (max-width: 450px) {
+        font-size: 22px;
+    }
+
+    @media screen and (max-width: 370px) {
+        font-size: 20px;
+    }
 `;
 
 const ExecutorParagraph = styled.p`
@@ -136,6 +144,12 @@ const Logo = styled.img`
         width: 300px;
         height: 100px;
     }
+
+    @media screen and (max-width: 600px) {
+        width: 200px;
+        height: 80px;
+        flex-direction: row;
+    }
 `;
 
 const SchoolButton = styled(NavBtn)`
@@ -158,6 +172,15 @@ const SchoolButton = styled(NavBtn)`
 
     @media screen and (max-width: 540px) {
         width: 200px;
+    }
+
+    @media screen and (max-width: 450px) {
+        font-size: 12px;
+        width: 150px;
+    }
+
+    @media screen and (max-width: 350px) {
+        width: 130px;
     }
 `;
 
@@ -185,5 +208,13 @@ const SchoolContactP = styled.p`
 
     @media screen and (max-width: 1240px) {
         margin: 20px 0;
+    }
+
+    @media screen and (max-width: 450px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 350px) {
+        font-size: 14px;
     }
 `;

@@ -12,7 +12,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 300px);
+    min-height: calc(100vh - 250px);
     @media only screen and (max-width: 550px) {
         width: 90%;
         padding: 30px 0 0 0;

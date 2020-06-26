@@ -5,7 +5,6 @@ import { Colors } from "../Components/Colors";
 import { navigationContext } from "./../contexts/navigation_context/navigation.provider";
 import gsap from "gsap";
 import logoPNG from "./../Img/logo_optimized.png";
-import debounce from "./../utils/debounce";
 
 const Nav = (props) => {
     const { isNavOpened, toggleClick, currentY, navVisible } = useContext(
