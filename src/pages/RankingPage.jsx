@@ -190,7 +190,7 @@ const P = styled.p`
 const I = styled.i``;
 const Icon = styled.div``;
 
-const LadderPage = (props) => {
+const RankingPage = (props) => {
     const ref = useRef(null);
     useAnimation(ref);
 
@@ -347,4 +347,4 @@ const LadderPage = (props) => {
     );
 };
 
-export default memo(LadderPage);
+export default memo(RankingPage);

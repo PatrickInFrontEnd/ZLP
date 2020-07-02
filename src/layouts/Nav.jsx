@@ -49,9 +49,9 @@ const Nav = (props) => {
                         Strona Główna
                     </NavBtn>
                 </NavLink>
-                <NavLink to="/drabinka">
+                <NavLink to="/ranking">
                     <NavBtn noBoxShadow onClick={toggleNavBtnClick}>
-                        Drabinka
+                        Ranking
                     </NavBtn>
                 </NavLink>
                 <NavLink to="/regulamin">
@@ -144,6 +144,7 @@ export const NavBtn = styled.span`
     text-align: center;
     margin-left: 20px;
     position: relative;
+    outline: none;
     cursor: pointer;
 
     ${({ noBefore }) =>
@@ -225,7 +226,7 @@ export const NavSection = styled.div`
         }
     }
 
-    @media screen and (max-height: 500px) {
+    @media screen and (max-height: 500px) and (max-width: 1024px) {
         height: calc(100vh - 80px);
         overflow-y: auto;
         padding: 10px 0;

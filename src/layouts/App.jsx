@@ -5,11 +5,12 @@ import { Route, Switch } from "react-router-dom";
 import { Colors } from "../Components/Colors";
 import NavigationProvider from "./../contexts/navigation_context/navigation.provider";
 import Footer from "./../Components/footer";
+import Spinner from "./../Components/Spinner";
 
 const MainPage = lazy(() => import("../pages/MainPage"));
 const StatutePage = lazy(() => import("../pages/StatutePage"));
 const PlansPage = lazy(() => import("../pages/PlansPage"));
-const LadderPage = lazy(() => import("../pages/LadderPage"));
+const RankingPage = lazy(() => import("../pages/RankingPage"));
 const LoginPage = lazy(() => import("../pages/LogInPage"));
 const SignPage = lazy(() => import("../pages/SignInPage"));
 const NotFoundPage = lazy(() => import("../pages/NotFound"));
@@ -27,12 +28,12 @@ class App extends Component {
                     <Nav />
                 </NavigationProvider>
                 <Main>
-                    <Suspense fallback={<h1>Loading...</h1>}>
+                    <Suspense fallback={<Spinner />}>
                         <Switch>
                             <Route path="/" exact component={MainPage} />
                             <Route path="/regulamin" component={StatutePage} />
                             <Route path="/plany" component={PlansPage} />
-                            <Route path="/drabinka" component={LadderPage} />
+                            <Route path="/ranking" component={RankingPage} />
                             <Route path="/logowanie" component={LoginPage} />
                             <Route path="/rejestracja" component={SignPage} />
                             <Route component={NotFoundPage} />
