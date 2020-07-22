@@ -1,5 +1,5 @@
 import React, { Component, createRef, memo } from "react";
-import { callbackAnimation } from "../Components/useAnimation.hook";
+import { callbackAnimation } from "../hooks/useAnimation.hook";
 import { Wrapper, Button, Container, Form, H2, I, Input } from "./SignInPage";
 
 class LogInPage extends Component {

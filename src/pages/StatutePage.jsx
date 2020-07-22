@@ -1,6 +1,6 @@
 import React, { useRef, memo } from "react";
 import styled from "styled-components";
-import useAnimation from "../Components/useAnimation.hook";
+import useAnimation from "./../hooks/useAnimation.hook";
 import { BlueHeader } from "./../Components/BlueHeader";
 import { Header } from "./../Components/Header";
 import { P } from "./../Components/P";

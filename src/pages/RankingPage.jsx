@@ -1,6 +1,6 @@
 import React, { useRef, memo } from "react";
 import styled from "styled-components";
-import useAnimation from "../Components/useAnimation.hook";
+import useAnimation from "./../hooks/useAnimation.hook";
 import { Colors } from "../Components/Colors";
 
 const Container = styled.div`

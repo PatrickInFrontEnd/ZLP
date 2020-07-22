@@ -1,6 +1,6 @@
 import React, { PureComponent, createRef } from "react";
 import styled from "styled-components";
-import { callbackAnimation } from "../Components/useAnimation.hook";
+import { callbackAnimation } from "../hooks/useAnimation.hook";
 import { Colors } from "../Components/Colors";
 
 export const Container = styled.div`
@@ -66,8 +66,7 @@ export const Button = styled.button`
 
     &:hover,
     &:focus {
-        background-color: ${Colors.blue_text};
-        box-shadow: 0 0 5px 2px ${Colors.blue_nav};
+        box-shadow: 0 0 2px 2px ${Colors.light_green};
     }
 
     @media screen and (max-width: 440px) {

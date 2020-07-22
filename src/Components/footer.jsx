@@ -11,8 +11,9 @@ const Footer = (props) => (
             <div>
                 <Description>
                     Turniej ZLP - platforma internetowa służąca organizacji
-                    turnieju ©2019.
+                    turnieju.
                 </Description>
+                <Description>©2019 - ©2020</Description>
                 <Description>Wszelkie prawa zastrzeżone.</Description>
             </div>
             <ExecutorParagraph>

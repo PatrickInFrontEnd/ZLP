@@ -1,5 +1,5 @@
 import React, { useRef, memo } from "react";
-import useAnimation from "../Components/useAnimation.hook";
+import useAnimation from "./../hooks/useAnimation.hook";
 import styled from "styled-components";
 import { Header } from "./../Components/Header";
 import { Colors } from "./../Components/Colors";
