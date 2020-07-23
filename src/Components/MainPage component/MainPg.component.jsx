@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import styled from "styled-components";
-import SocialMedia from "./SocialMedia";
-import { NavBtn } from "../layouts/Nav";
+import SocialMedia from "./../SocialMedia component/SocialMedia.component";
+import { NavBtn } from "../../layouts/Navigation/Nav";
 import { Colors } from "./Colors";
 import { BlueHeader } from "./BlueHeader";
 import { P } from "./P";

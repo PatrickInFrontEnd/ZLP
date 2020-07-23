@@ -1,7 +1,7 @@
 import React, { PureComponent, createRef } from "react";
 import styled from "styled-components";
 import { callbackAnimation } from "../hooks/useAnimation.hook";
-import { Colors } from "../utils/Colors.theme";
+import { Colors } from "../Components/Colors";
 
 export const Container = styled.div`
     font-family: "Nunito", "Saira", "Montserrat", "Arial", "Sans-Serif";

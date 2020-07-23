@@ -1,26 +1,6 @@
-import React, { memo } from "react";
 import styled from "styled-components";
-import gsap from "gsap";
-import { Colors } from "./Colors";
-import banerJPG from "./../Img/baner.jpg";
-
-const BannerSection = (props) => {
-    const handleBannerClick = () => {
-        gsap.to(document, { duration: 1, scrollTo: "#main" });
-    };
-
-    return (
-        <BannerWrapper>
-            <Banner>Witaj Graczu!</Banner>
-            <BannerBtn onClick={handleBannerClick} href="#main">
-                <DownArrow className="fas fa-angle-double-down" />
-            </BannerBtn>
-            <CheckOutTitle>Sprawdź co cię czeka!</CheckOutTitle>
-        </BannerWrapper>
-    );
-};
-
-export default memo(BannerSection);
+import { Colors } from "./../../utils/Colors.theme";
+import banerJPG from "./../../Img/baner.jpg";
 
 const BannerWrapper = styled.div`
     font-family: "Nunito";
@@ -201,3 +181,5 @@ const CheckOutTitle = styled.h3`
         left: 35%;
     }
 `;
+
+export { BannerWrapper, Banner, BannerBtn, DownArrow, CheckOutTitle };

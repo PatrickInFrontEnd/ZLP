@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "./Colors";
+import { Colors } from "./../../utils/Colors.theme";
 
 export const Button = styled.a`
     position: relative;

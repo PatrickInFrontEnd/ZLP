@@ -1,19 +1,19 @@
 import React, { Component, Suspense, lazy } from "react";
-import Nav from "./Nav.jsx";
 import styled, { createGlobalStyle } from "styled-components";
 import { Route, Switch } from "react-router-dom";
-import { Colors } from "../Components/Colors";
-import NavigationProvider from "./../contexts/navigation_context/navigation.provider";
-import Footer from "./../Components/footer";
-import Spinner from "./../Components/Spinner";
+import Nav from "./../Navigation/Nav";
+import { Colors } from "../../utils/Colors.theme";
+import NavigationProvider from "./../../contexts/navigation_context/navigation.provider";
+import Footer from "../../Components/Footer component/Footer.component";
+import Spinner from "../../Components/Spinner component/Spinner.component";
 
-const MainPage = lazy(() => import("../pages/MainPage"));
-const StatutePage = lazy(() => import("../pages/StatutePage"));
-const PlansPage = lazy(() => import("../pages/PlansPage"));
-const RankingPage = lazy(() => import("../pages/RankingPage"));
-const LoginPage = lazy(() => import("../pages/LogInPage"));
-const SignPage = lazy(() => import("../pages/SignInPage"));
-const NotFoundPage = lazy(() => import("../pages/NotFound"));
+const MainPage = lazy(() => import("../../pages/MainPage/MainPage"));
+const StatutePage = lazy(() => import("../../pages/StatutePage/StatutePage"));
+const PlansPage = lazy(() => import("../../pages/PlansPage/PlansPage"));
+const RankingPage = lazy(() => import("../../pages/RankingPage/RankingPage"));
+const LoginPage = lazy(() => import("../../pages/LogInPage/LogInPage"));
+const SignPage = lazy(() => import("../../pages/SignInPage/SignInPage"));
+const NotFoundPage = lazy(() => import("../../pages/NotFoundPage/NotFound"));
 
 const Main = styled.main`
     width: 100%;

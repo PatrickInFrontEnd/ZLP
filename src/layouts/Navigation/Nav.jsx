@@ -1,10 +1,10 @@
 import React, { useContext, useRef, useEffect } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { Colors } from "../Components/Colors";
-import { navigationContext } from "./../contexts/navigation_context/navigation.provider";
+import { Colors } from "../../utils/Colors.theme";
+import { navigationContext } from "./../../contexts/navigation_context/navigation.provider";
 import gsap from "gsap";
-import logoPNG from "./../Img/logo_optimized.png";
+import logoPNG from "./../../Img/logo_optimized.png";
 
 const Nav = (props) => {
     const { isNavOpened, toggleClick, currentY, navVisible } = useContext(
