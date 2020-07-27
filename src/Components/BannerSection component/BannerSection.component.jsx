@@ -1,6 +1,5 @@
 import React, { memo } from "react";
 import gsap from "gsap";
-
 import {
     BannerWrapper,
     Banner,

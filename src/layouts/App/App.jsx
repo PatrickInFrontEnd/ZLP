@@ -11,7 +11,7 @@ const MainPage = lazy(() => import("../../pages/MainPage/MainPage"));
 const StatutePage = lazy(() => import("../../pages/StatutePage/StatutePage"));
 const PlansPage = lazy(() => import("../../pages/PlansPage/PlansPage"));
 const RankingPage = lazy(() => import("../../pages/RankingPage/RankingPage"));
-const LoginPage = lazy(() => import("../../pages/LogInPage/LogInPage"));
+const LoginPage = lazy(() => import("../../pages/LoginPage/LogInPage"));
 const SignPage = lazy(() => import("../../pages/SignInPage/SignInPage"));
 const NotFoundPage = lazy(() => import("../../pages/NotFoundPage/NotFound"));
 

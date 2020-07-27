@@ -1,6 +1,6 @@
 import React from "react";
-import MainPg from "../Components/MainPg";
-import Banner from "./../Components/BannerSection";
+import MainContent from "../../Components/MainPage component/MainPg.component";
+import Banner from "./../../Components/BannerSection component/BannerSection.component";
 
 class MainPage extends React.PureComponent {
     state = {};
@@ -8,7 +8,7 @@ class MainPage extends React.PureComponent {
         return (
             <>
                 <Banner />
-                <MainPg />
+                <MainContent />
             </>
         );
     }

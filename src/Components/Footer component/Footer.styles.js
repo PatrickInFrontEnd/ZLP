@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { NavBtn } from "./../../layouts/Navigation/Nav";
+import { NavBtn } from "./../../layouts/Navigation/Nav.styles";
 import { Colors } from "./../../utils/Colors.theme";
 
 const Wrapper = styled.footer`

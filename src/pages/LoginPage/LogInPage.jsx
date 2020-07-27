@@ -8,7 +8,7 @@ import {
     H2,
     I,
     Input,
-} from "../SignInPage/SignInPage";
+} from "./../SignInPage/SignInPage.styles";
 
 class LogInPage extends Component {
     state = {
