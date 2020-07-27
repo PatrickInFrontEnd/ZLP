@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Colors } from "./Colors";
-import { Header } from "./Header";
+import { Colors } from "./../../utils/Colors.theme";
+import { Header } from "./../Header component/Header.styles";
 
 export const SHeader = styled(Header)`
     border: none;

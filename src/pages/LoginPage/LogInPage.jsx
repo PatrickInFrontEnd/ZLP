@@ -1,6 +1,14 @@
 import React, { Component, createRef, memo } from "react";
-import { callbackAnimation } from "../hooks/useAnimation.hook";
-import { Wrapper, Button, Container, Form, H2, I, Input } from "./SignInPage";
+import { callbackAnimation } from "./../../hooks/useAnimation.hook";
+import {
+    Wrapper,
+    Button,
+    Container,
+    Form,
+    H2,
+    I,
+    Input,
+} from "./../SignInPage/SignInPage.styles";
 
 class LogInPage extends Component {
     state = {
@@ -15,13 +23,16 @@ class LogInPage extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+
         if (this.state.name && this.state.password) {
             this.setState({
                 name: "",
                 password: "",
             });
             console.log("formularz wysłany");
-        } else console.log("pola musza byc wypełnione");
+        } else {
+            console.log("pola musza byc wypełnione");
+        }
     };
 
     wrapper = createRef(null);
