@@ -1,6 +1,6 @@
 # ZLP platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Template for ZLP - school tournament. In the future login features are going to be implemented.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Template for ZLP - school tournament. For now it's just simple landing page.In the future login and sign up features are going to be implemented.
 
 ## Available Scripts
 
