@@ -82,7 +82,7 @@ const Nav = (props) => {
                     </NavBtn>
                 </NavLink>
 
-                <NavLink to="/logowanie">
+                <NavLink to="/logowanie#top">
                     <NavBtn
                         isBig
                         isWhite

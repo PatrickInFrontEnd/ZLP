@@ -1,6 +1,6 @@
-import React, { Component, Suspense, lazy } from "react";
+import React, { Suspense, lazy, Component } from "react";
 import styled, { createGlobalStyle } from "styled-components";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
 import Nav from "./../Navigation/Nav";
 import { Colors } from "../../utils/Colors.theme";
 import NavigationProvider from "./../../contexts/navigation_context/navigation.provider";
@@ -15,11 +15,13 @@ const LoginPage = lazy(() => import("../../pages/LoginPage/LogInPage"));
 const SignPage = lazy(() => import("../../pages/SignInPage/SignInPage"));
 const NotFoundPage = lazy(() => import("../../pages/NotFoundPage/NotFound"));
 
-const Main = styled.main`
-    width: 100%;
-`;
-
 class App extends Component {
+    componentDidUpdate(prevProps) {
+        if (this.props.location !== prevProps.location) {
+            window.scrollTo(0, 0);
+        }
+    }
+
     render() {
         return (
             <>
@@ -46,7 +48,7 @@ class App extends Component {
     }
 }
 
-export default App;
+export default withRouter(App);
 
 const GlobalStyle = createGlobalStyle` 
     *{
@@ -64,4 +66,8 @@ const GlobalStyle = createGlobalStyle`
     a,span,button{
       transition-duration:.3s;
     }
+`;
+
+const Main = styled.main`
+    width: 100%;
 `;
