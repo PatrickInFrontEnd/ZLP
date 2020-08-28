@@ -8,10 +8,7 @@ import {
     QuarterfinalColumns,
     SemiFinalsColumns,
     Final,
-    Teams,
-    TeamSquads,
     H3,
-    H1,
     PInLederSection,
     P,
 } from "./RankingPage.styles";
@@ -101,72 +98,7 @@ const RankingPage = (props) => {
                     </QuarterfinalColumns>
                 </Collection>
             </Ledder>
-            <Teams>
-                <TeamSquads>
-                    <H1>Nazwa drużyny</H1>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                </TeamSquads>
-                <TeamSquads>
-                    <H1>Nazwa drużyny</H1>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                </TeamSquads>
-                <TeamSquads>
-                    <H1>Nazwa drużyny</H1>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                </TeamSquads>
-                <TeamSquads>
-                    <H1>Nazwa drużyny</H1>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                </TeamSquads>
-                <TeamSquads>
-                    <H1>Nazwa drużyny</H1>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                </TeamSquads>
-                <TeamSquads>
-                    <H1>Nazwa drużyny</H1>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                </TeamSquads>
-                <TeamSquads>
-                    <H1>Nazwa drużyny</H1>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                </TeamSquads>
-                <TeamSquads>
-                    <H1>Nazwa drużyny</H1>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                    <P>Imie "NICK" Nazwisko</P>
-                </TeamSquads>
-            </Teams>
+            <P>Póki co żadna drużyna nie została zarejestrowana</P>
         </Container>
     );
 };
